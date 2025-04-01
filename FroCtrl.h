@@ -32,7 +32,7 @@ public:
     }
 
     // Call this every tick. dt is in milliseconds (default 1ms).
-    void tick(float dt = 1.0f) {
+    void tock(float dt = 1.0f) {
         if (!_active)
             return;
 

@@ -5,6 +5,7 @@
 #include <FlexCAN_T4.h>
 #include "motctrl_prot.h"
 #include <messages.h>
+#include <FroCtrl.h>
 
 
 template<typename CANBusType>
@@ -42,7 +43,8 @@ public:
   volatile float angle1 = 0.0;
   volatile float angle2 = 0.0;
   volatile float offset = 0.0;
-
+  volatile bool a1 = false;
+  volatile bool a2 = false;
   volatile float positionSetpoint = 0.0;
   static constexpr float vMax = 15.0;
   volatile float vLim = cVelocity;
@@ -55,6 +57,7 @@ public:
 
 
   Bounce bounce = Bounce();
+  FeedrateGovernor frg{0, 8.0f, cVelocity}; 
 
   int dir;
   uint8_t can_id;
@@ -117,6 +120,10 @@ public:
       newConfig = false;
     }
   }
+
+
+  
+
   void calibrate()
   {     
 
@@ -124,39 +131,63 @@ public:
     {
       case 1:  // droop all
         if (!bounce.read())
-          setVelocity(cVelocity * -dir);
+          // setVelocity(cVelocity * -dir);
+          frg.setTarget(cVelocity * -dir);
         else
         {
-          setVelocity(0.0);
+          // setVelocity(0.0);
+          frg.setTarget(0.0);
+          // if(abs(omega)<0.001)
           cState = 1;
         }
         break;
       case 2:  // cross edge
         if (bounce.read())
-          setVelocity(cVelocity * -dir);
+          // setVelocity(cVelocity * -dir);
+          frg.setTarget(cVelocity * -dir);
+
         else
         {
-          setVelocity(0.0);
-          angle1 = theta;
+          if(!a1)
+          {
+            angle1 = theta;
+            a1 = true;
+          }
+          // setVelocity(0.0);
+          frg.setTarget(0.0);
+          // if(abs(omega)<0.001)
           cState = 2;
         }
         break;
       case 3:  // get back to light
         if (!bounce.read())
-          setVelocity(cVelocity * dir);
+          // setVelocity(cVelocity * dir);
+          frg.setTarget(cVelocity * dir);
+
         else
         {
-          setVelocity(0.0);
+          // setVelocity(0.0);
+          frg.setTarget(0.0);
+          // if(abs(omega)<0.001)
           cState = 3;
         }
         break;
       case 4:  //cross edge again
         if (bounce.read())
-          setVelocity(cVelocity * dir);
+          // setVelocity(cVelocity * dir);
+          frg.setTarget(cVelocity * dir);
+
         else
         {
-          setVelocity(0.0);
-          angle2 = theta;
+          // angle2 = theta;
+          if(!a2)
+          {
+            angle2 = theta;
+            a2 = true;
+          }
+          // setVelocity(0.0);
+          frg.setTarget(0.0);
+          // if(abs(omega)==0.0)
           cState = 4;
         }
         break;
@@ -171,28 +202,20 @@ public:
         newConfig = true;
         break;
       default:
-        setVelocity(0);
+      frg.setTarget(0.0);
         break;
     }
-    // if ((motor1.tState == motor1.cState) && (motor2.tState == motor2.cState)) {
-    //   if (motor1.cState == 0 && motor2.cState == 0) {
-    //     motor1.tState += 1;
-    //     motor2.tState += 1;
-    //   }
-    //   else if (motor1.cState < 4) {
-    //     motor1.tState += 1;
-    //   }
-    //   else if (motor2.cState < 4) {
-    //     motor2.tState += 1;
-    //   }
-    //   else {
-    //     motor1.tState += 1;
-    //     motor2.tState += 1;
-    //   }
-    // }
-    
+
+    frg.tock();
+
+setVelocity(frg.getFeedrate());
+  // logInfo("Target: %.2f, Smoothed: %.2f\n", target, frg.getFeedrate());
 
   }
+
+
+
+
   void enable()
   {
     CAN_message_t msg;
