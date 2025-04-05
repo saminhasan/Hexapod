@@ -24,7 +24,7 @@ public:
         _to     = target;
         _elapsed = 0.0f;
         // Duration based on absolute difference, scaled by _scale.
-        _duration = abs(_to - _from) * _scale;
+        _duration = fabsf(_to - _from) * _scale;
         if (_duration < 1.0f)  // Avoid zero-duration transitions.
             _duration = 1.0f;
         _active = true;

@@ -2,7 +2,19 @@
 #define MESSAGES_H
 
 #include <packet.h>
-
+/*
+  TODO:
+  // Packet layout constants
+// Total overhead = 16 bytes (header, CRC, and end byte)
+static constexpr uint32_t OVERHEAD_SIZE = 16;
+static constexpr uint32_t START_OFFSET   = 0;            // 1 byte: 0x01
+static constexpr uint32_t LENGTH_OFFSET  = 1;            // 4 bytes: packet length
+static constexpr uint32_t SEQ_OFFSET     = 5;            // 4 bytes: sequence number
+static constexpr uint32_t SYSID_OFFSET   = 9;            // 1 byte: sysID
+static constexpr uint32_t MSGID_OFFSET   = 10;           // 1 byte: message ID
+static constexpr uint32_t PAYLOAD_OFFSET = 11;           // message payload starts here
+Stop using magic numbers
+*/
 typedef enum
 {
   MSG_HEARTBEAT = 0,

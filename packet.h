@@ -2,7 +2,19 @@
 #define PACKET_H
 
 #include <common.h>
+/*
+  TODO:
+  // Packet layout constants
+// Total overhead = 16 bytes (header, CRC, and end byte)
+static constexpr uint32_t OVERHEAD_SIZE = 16;
+static constexpr uint32_t START_OFFSET   = 0;            // 1 byte: 0x01
+static constexpr uint32_t LENGTH_OFFSET  = 1;            // 4 bytes: packet length
+static constexpr uint32_t SEQ_OFFSET     = 5;            // 4 bytes: sequence number
+static constexpr uint32_t SYSID_OFFSET   = 9;            // 1 byte: sysID
+static constexpr uint32_t MSGID_OFFSET   = 10;           // 1 byte: message ID
+static constexpr uint32_t PAYLOAD_OFFSET = 11;           // message payload starts here
 
+*/
 class Packet
 {
   uint32_t packetLength;
@@ -17,13 +29,13 @@ public:
   Packet(uint32_t msgLen)
   {
     messageLength = msgLen;
-    packetLength = messageLength + 16;  // 14-byte overhead
+    packetLength = messageLength + 16;  // 16-byte overhead
     rawBytes = new uint8_t[packetLength];
     rawBytes[0] = 0x01;  // start byte
     // Write packetLength into bytes 1-4.
-    memcpy(&rawBytes[1], &packetLength, sizeof(packetLength));
+    memcpy(&rawBytes[1], &packetLength, sizeof(uint32_t));
     // Auto-assign the sequence number into bytes 5-8.
-    memcpy(&rawBytes[5], &globalSequenceNumber, sizeof(globalSequenceNumber));
+    memcpy(&rawBytes[5], &globalSequenceNumber, sizeof(uint32_t));
     rawBytes[9] = sysID;
     globalSequenceNumber++;  // increment for next packet
     // The end byte is set at the end.
@@ -52,13 +64,7 @@ public:
     memcpy(&rawBytes[11], &msg, sizeof(T));
   }
 
-  // // Recalculates the CRC over bytes [1, packetLength-6] and writes it at packetLength-5.
-  // void setCRC()
-  // {
-  //   FastCRC32 CRC32;
-  //   uint32_t crc = CRC32.crc32(&rawBytes[1], packetLength - 6);  // exclude start & end bytes
-  //   memcpy(&rawBytes[packetLength - 5], &crc, sizeof(crc));
-  // }
+
   void setCRC() {
     uint32_t crc = calcCRC32(&rawBytes[1], packetLength - 6);  // exclude start & end bytes
     memcpy(&rawBytes[packetLength - 5], &crc, sizeof(crc));
