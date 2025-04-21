@@ -2,19 +2,7 @@
 #define MESSAGES_H
 
 #include <packet.h>
-/*
-  TODO:
-  // Packet layout constants
-// Total overhead = 16 bytes (header, CRC, and end byte)
-static constexpr uint32_t OVERHEAD_SIZE = 16;
-static constexpr uint32_t START_OFFSET   = 0;            // 1 byte: 0x01
-static constexpr uint32_t LENGTH_OFFSET  = 1;            // 4 bytes: packet length
-static constexpr uint32_t SEQ_OFFSET     = 5;            // 4 bytes: sequence number
-static constexpr uint32_t SYSID_OFFSET   = 9;            // 1 byte: sysID
-static constexpr uint32_t MSGID_OFFSET   = 10;           // 1 byte: message ID
-static constexpr uint32_t PAYLOAD_OFFSET = 11;           // message payload starts here
-Stop using magic numbers
-*/
+
 typedef enum
 {
   MSG_HEARTBEAT = 0,
@@ -80,7 +68,7 @@ public:
 class Disable : public Packet
 {
 public:
-  Disable(uint8_t axis)
+  Disable()
     : Packet(0)
   {
     setMessageID(MSG_DISABLE);
@@ -130,7 +118,7 @@ public:
     : Packet(6 * sizeof(float))
   {
     setMessageID(MSG_POSITION6D);
-    memcpy(&data()[11], values, 6 * sizeof(float));
+    memcpy(&data()[PAYLOAD_OFFSET], values, 6 * sizeof(float));
     setCRC();
   }
 };
@@ -167,7 +155,7 @@ public:
     : Packet(6 * sizeof(float) * numFloats)
   {
     setMessageID(MSG_TRAJECTORY_6D);
-    memcpy(&data()[11], values, 6 * sizeof(float));
+    memcpy(&data()[PAYLOAD_OFFSET], values, 6 * sizeof(float));
     setCRC();
   }
 };
@@ -191,7 +179,7 @@ public:
     va_end(args);
     pkt = new Packet(len);
     pkt->setMessageID(MSG_INFO);
-    memcpy(&pkt->data()[11], msg, len);
+    memcpy(&pkt->data()[PAYLOAD_OFFSET], msg, len);
     pkt->setCRC();
   }
 
@@ -241,7 +229,7 @@ public:
   ACK(const T& payload)
     : Packet(sizeof(T))
   {
-    setByte(9, 255);
+    setByte(SYSID_OFFSET, 255);
     setMessageID(MSG_ACK);
     setMessage<T>(payload);
     setCRC();

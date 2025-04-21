@@ -1,12 +1,8 @@
 #ifndef PACKET_H
 #define PACKET_H
-
 #include <common.h>
-/*
-  TODO:
-  // Packet layout constants
-// Total overhead = 16 bytes (header, CRC, and end byte)
-static constexpr uint32_t OVERHEAD_SIZE = 16;
+
+static constexpr uint32_t PACKET_OVERHEAD = 16;           // Total overhead = 16 bytes (header, CRC, and end byte)
 static constexpr uint32_t START_OFFSET   = 0;            // 1 byte: 0x01
 static constexpr uint32_t LENGTH_OFFSET  = 1;            // 4 bytes: packet length
 static constexpr uint32_t SEQ_OFFSET     = 5;            // 4 bytes: sequence number
@@ -14,7 +10,6 @@ static constexpr uint32_t SYSID_OFFSET   = 9;            // 1 byte: sysID
 static constexpr uint32_t MSGID_OFFSET   = 10;           // 1 byte: message ID
 static constexpr uint32_t PAYLOAD_OFFSET = 11;           // message payload starts here
 
-*/
 class Packet
 {
   uint32_t packetLength;
@@ -25,18 +20,18 @@ class Packet
 public:
   static uint8_t sysID;
 
-  // msgLen: payload length (sysID (1) + msgID (1) + additional data)
+  // msgLen: payload length (sysID (1) + msgID (1) +  data)
   Packet(uint32_t msgLen)
   {
     messageLength = msgLen;
-    packetLength = messageLength + 16;  // 16-byte overhead
+    packetLength = messageLength + PACKET_OVERHEAD;
     rawBytes = new uint8_t[packetLength];
-    rawBytes[0] = 0x01;  // start byte
+    rawBytes[START_OFFSET] = 0x01;  // start byte
     // Write packetLength into bytes 1-4.
-    memcpy(&rawBytes[1], &packetLength, sizeof(uint32_t));
+    memcpy(&rawBytes[LENGTH_OFFSET], &packetLength, sizeof(uint32_t));
     // Auto-assign the sequence number into bytes 5-8.
-    memcpy(&rawBytes[5], &globalSequenceNumber, sizeof(uint32_t));
-    rawBytes[9] = sysID;
+    memcpy(&rawBytes[SEQ_OFFSET], &globalSequenceNumber, sizeof(uint32_t));
+    rawBytes[SYSID_OFFSET] = sysID;
     globalSequenceNumber++;  // increment for next packet
     // The end byte is set at the end.
     rawBytes[packetLength - 1] = 0x04;
@@ -54,14 +49,14 @@ public:
   }
   void setMessageID(uint8_t msgID)
   {
-    rawBytes[10] = msgID;
+    rawBytes[MSGID_OFFSET] = msgID;
   }
 
   template<typename T>
   void setMessage(const T& msg)
   {
     if (sizeof(T) > messageLength) return;  // could assert or clamp
-    memcpy(&rawBytes[11], &msg, sizeof(T));
+    memcpy(&rawBytes[PAYLOAD_OFFSET], &msg, sizeof(T));
   }
 
 
