@@ -355,7 +355,7 @@ AckMotorState getAckMotorState()
   state.velocitySetpoint = Kp * (bodyToMotorFrame(positionSetpoint) - theta) - Kd * omega;
   state.theta = motorToBodyFrame(theta);
   state.omega = omega;
-  // state.torque = torque;
+  state.current = torque;
   state.timestamp = micros();
   return state;
 }

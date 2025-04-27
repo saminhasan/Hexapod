@@ -287,6 +287,7 @@ struct __attribute__((packed)) AckMotorState
   float velocitySetpoint=0.0;
   float theta=0.0;
   float omega=0.0;
+  float current=0.0;
   uint32_t timestamp=0;
 };
 
