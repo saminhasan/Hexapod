@@ -50,7 +50,7 @@ public:
   static constexpr float vMax = 32.0;
   volatile float vLim = cVelocity;
   volatile float Kp = 5.0;
-  volatile float Kd = 0.5;
+  volatile float Kd = 1.0;
 
 
   AckMotorState state;
