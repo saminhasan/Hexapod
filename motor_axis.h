@@ -46,7 +46,7 @@ public:
   volatile bool a1 = false;
   volatile bool a2 = false;
   volatile float positionSetpoint = 0.0;
-  static constexpr float vMax = 15.0;
+  static constexpr float vMax = 32.0;
   volatile float vLim = cVelocity;
   volatile float Kp = 5.0;
   volatile float Kd = 0.5;
