@@ -33,8 +33,9 @@ public:
   volatile uint32_t canmsg_count;
 
   volatile bool calibrated = false;
-  static constexpr float cVelocity = 1.0;  // rad/s
+  static constexpr float cVelocity = 0.33;  // rad/s
   static constexpr float D90 = M_PI/2;  // rad/s
+  static constexpr float proxPos = 0;  // rad/s
 
   volatile uint8_t cState = 0;
   volatile uint8_t tState = 0;
@@ -132,7 +133,7 @@ public:
       case 1:  // droop all
         if (!bounce.read())
           // setVelocity(cVelocity * -dir);
-          frg.setTarget(cVelocity * -dir);
+          frg.setTarget(cVelocity * dir);
         else
         {
           // setVelocity(0.0);
@@ -144,7 +145,7 @@ public:
       case 2:  // cross edge
         if (bounce.read())
           // setVelocity(cVelocity * -dir);
-          frg.setTarget(cVelocity * -dir);
+          frg.setTarget(cVelocity * dir);
 
         else
         {
@@ -162,7 +163,7 @@ public:
       case 3:  // get back to light
         if (!bounce.read())
           // setVelocity(cVelocity * dir);
-          frg.setTarget(cVelocity * dir);
+          frg.setTarget(cVelocity * -dir);
 
         else
         {
@@ -175,7 +176,7 @@ public:
       case 4:  //cross edge again
         if (bounce.read())
           // setVelocity(cVelocity * dir);
-          frg.setTarget(cVelocity * dir);
+          frg.setTarget(cVelocity * -dir);
 
         else
         {
@@ -271,7 +272,7 @@ setVelocity(frg.getFeedrate());
   void setPosition(float rad)
   {
     rad = constrain(rad, -D90, D90);
-    // rad = (rad * dir) + (dir * M_PI / 2) + offset;
+    // rad = (rad * dir) + (dir * proxPos) + offset;
     float u = Kp * (bodyToMotorFrame(rad) - theta) - (Kd * omega);
     setVelocity(u);
   }
@@ -332,11 +333,11 @@ setVelocity(frg.getFeedrate());
 
   float motorToBodyFrame(float X_motor)
   {
-    return (X_motor - offset - (dir * M_PI / 2)) / dir;
+    return (X_motor - offset - (dir * proxPos)) / dir;
   }
   float bodyToMotorFrame(float rad)
   {
-    return (rad * dir) + (dir * M_PI / 2) + offset;
+    return (rad * dir) + (dir * proxPos) + offset;
   }
 AckMotorConfig getAckMotorConfig()
 {
