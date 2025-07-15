@@ -29,9 +29,10 @@ public:
             return;
 
         uint32_t availableSpace = bufferSize - bufferIndex;
-        if (bytesToRead > availableSpace)
+        if (bytesToRead > availableSpace) // >=?
             bytesToRead = availableSpace;
         // was there supposed to be an else here?
+        // have to take a decision here, either drop everything and send a error message in both cases.
         uint32_t bytesRead = port.readBytes(reinterpret_cast<char*>(buffer + bufferIndex), bytesToRead);
         bufferIndex += bytesRead;
 
