@@ -31,7 +31,7 @@ public:
         uint32_t availableSpace = bufferSize - bufferIndex;
         if (bytesToRead > availableSpace)
             bytesToRead = availableSpace;
-
+        // was there supposed to be an else here?
         uint32_t bytesRead = port.readBytes(reinterpret_cast<char*>(buffer + bufferIndex), bytesToRead);
         bufferIndex += bytesRead;
 
