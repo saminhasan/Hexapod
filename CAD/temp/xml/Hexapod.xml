@@ -1,0 +1,2475 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<SimscapeMultibodyImportXML version="2.0" xmlns="urn:mathworks:SimscapeMultibody:import" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Created by="" on="08/22/26||17:50:58" using="Simscape Multibody Link Version 7.4" from="SolidWorks 33.5.0"/>
+<ModelUnits mass="kilogram" length="millimeter"/>
+<DataUnits mass="kilogram" length="meter"/>
+<RootAssembly name="Hexapod" uid="Hexapod" version="538">
+<AssemblyFile name="Hexapod.SLDASM" type="SolidWorks Assembly"/>
+<InstanceTree>
+<Instance name="Base_a-1" uid="Base_a-1" entityUid="Base_a" rigid="true">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+<Instance name="Base_Side_a-1" uid="Base_Side_a-1" entityUid="Base_Side_a" rigid="true">
+<Transform>
+<Rotation>1 0 0 0 -3.5979285346189607e-16 1 0 -0.99999999999999989 -3.5979285346183311e-16</Rotation>
+<Translation>-0.17171539085037274 -1.5366861401371534 1.1439512624909582</Translation>
+</Transform>
+<Instance name="base_plate_corner_connector_mm-1" uid="base_plate_corner_connector_mm-1" entityUid="base_plate_corner_connector_mm*:*Default">
+<Transform>
+<Rotation>-0.86602540378443815 -1.0185943702600111e-16 0.50000000000000067 0 1 2.2592000048735785e-16 -0.50000000000000067 2.0206137280692744e-16 -0.86602540378443815</Rotation>
+<Translation>0.013426954689523818 1.093951262490986 1.5206174745266539</Translation>
+</Transform>
+</Instance>
+<Instance name="1942K49_303 Stainless Steel Rigid Leveling Mount with Nylon Cushion-1" uid="1942K49_303 Stainless Steel Rigid Leveling Mount with Nylon Cushion-1" entityUid="1942K49_303 Stainless Steel Rigid Leveling Mount with Nylon Cushion*:*1942K49">
+<Transform>
+<Rotation>-0.80901699437494645 0 -0.58778525229247447 -3.318934029792525e-15 -0.99999999999999978 4.4437995310871657e-15 -0.58778525229247447 5.5459298162887414e-15 0.80901699437494645</Rotation>
+<Translation>0.035636159507388243 1.2717512624909961 1.7723334185313551</Translation>
+</Transform>
+</Instance>
+<Instance name="spacer-2" uid="spacer-2" entityUid="spacer*:*Default">
+<Transform>
+<Rotation>1.2290732959928082e-16 3.3306690738883335e-16 1 0.99999999999999978 0 -1.2290732959929088e-16 0 1 -3.3306690738626058e-16</Rotation>
+<Translation>-0.0042609711496272851 1.2209512624909857 1.4836861401371535</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A710_Alloy Steel Shoulder Screw-1" uid="91259A710_Alloy Steel Shoulder Screw-1" entityUid="91259A710_Alloy Steel Shoulder Screw*:*91259A710">
+<Transform>
+<Rotation>0 0 -0.99999999999999989 0.99999998839852511 -0.00015232514287644695 0 -0.000152325142876447 -0.99999998839852533 0</Rotation>
+<Translation>-0.016960971149627302 1.2336512624909857 1.2979261401371531</Translation>
+</Transform>
+</Instance>
+<Instance name="90576A137_Medium-Strength Steel Nylon-Insert Locknut-2" uid="90576A137_Medium-Strength Steel Nylon-Insert Locknut-2" entityUid="90576A137_Medium-Strength Steel Nylon-Insert Locknut*:*90576A137">
+<Transform>
+<Rotation>0 3.2816080798853154e-16 -0.99999999999999989 6.5265460044870474e-15 0.99999999999999978 3.2816080798853618e-16 1 -6.5265460044871105e-15 0</Rotation>
+<Translation>-0.022960971149627307 1.220951262490986 1.5896861401371531</Translation>
+</Transform>
+</Instance>
+<Instance name="95245A233_Grade B7 Medium-Strength Steel Threaded Rod-2" uid="95245A233_Grade B7 Medium-Strength Steel Threaded Rod-2" entityUid="95245A233_Grade B7 Medium-Strength Steel Threaded Rod*:*95245A233">
+<Transform>
+<Rotation>0 1.3425839812353359e-16 -0.99999999999999989 6.5359667178465345e-15 0.99999999999999978 1.3425839812353827e-16 1 -6.5359667178465977e-15 0</Rotation>
+<Translation>0.012389028850372658 1.220951262490986 1.5896861401371534</Translation>
+</Transform>
+</Instance>
+<Instance name="base_plate_corner_connector_mm-2" uid="base_plate_corner_connector_mm-2" entityUid="base_plate_corner_connector_mm*:*Default">
+<Transform>
+<Rotation>-0.86602540378443826 0 0.50000000000000067 2.8311196401791978e-15 -0.99999999999999978 4.8552710362488089e-15 0.50000000000000067 5.6203478797399917e-15 0.86602540378443826</Rotation>
+<Translation>0.013426954689523818 1.2463512624909951 1.5527548057476452</Translation>
+</Transform>
+</Instance>
+<Instance name="90576A137_Medium-Strength Steel Nylon-Insert Locknut-1" uid="90576A137_Medium-Strength Steel Nylon-Insert Locknut-1" entityUid="90576A137_Medium-Strength Steel Nylon-Insert Locknut*:*90576A137">
+<Transform>
+<Rotation>0 -1.9391161102528706e-16 0.99999999999999989 -5.6329966901723295e-15 0.99999999999999978 1.9391161102528228e-16 -1 -5.6329966901723926e-15 0</Rotation>
+<Translation>0.04793902885037267 1.2209512624909862 1.5896861401371534</Translation>
+</Transform>
+</Instance>
+<Instance name="bumper-1" uid="bumper-1" entityUid="bumper*:*Default">
+<Transform>
+<Rotation>-1.1102230246122926e-16 1.3425839812353253e-16 -0.99999999999999989 0 0.99999999999999978 1.3425839812353755e-16 1 0 -1.110223024625156e-16</Rotation>
+<Translation>0.041939028850372678 1.2209512624909857 1.5366861401371534</Translation>
+</Transform>
+</Instance>
+<Instance name="base_plate_mm-1" uid="base_plate_mm-1" grounded="true" entityUid="base_plate_mm*:*Default">
+<Transform>
+<Rotation>1 0 0 0 -3.5979285346189607e-16 -0.99999999999999989 0 1 -3.5979285346183311e-16</Rotation>
+<Translation>-0.01061097114962728 1.1701512624909858 1.5366861401371532</Translation>
+</Transform>
+</Instance>
+<Instance name="spacer-1" uid="spacer-1" entityUid="spacer*:*Default">
+<Transform>
+<Rotation>2.7755575615500275e-16 0 1 0 0.99999999999999978 0 -1 0 2.7755575615757552e-16</Rotation>
+<Translation>-0.0042609711496273406 1.220951262490986 1.5896861401371531</Translation>
+</Transform>
+</Instance>
+<Instance name="95245A233_Grade B7 Medium-Strength Steel Threaded Rod-1" uid="95245A233_Grade B7 Medium-Strength Steel Threaded Rod-1" entityUid="95245A233_Grade B7 Medium-Strength Steel Threaded Rod*:*95245A233">
+<Transform>
+<Rotation>-4.996003610800346e-16 0 -1 0.026781687779811384 0.99964130626923586 0 0.9996413062692362 -0.026781687779811391 -6.1062266354512243e-16</Rotation>
+<Translation>0.012389028850372685 1.2209512624909857 1.4836861401371535</Translation>
+</Transform>
+</Instance>
+<Instance name="prox_sensor-1" uid="prox_sensor-1" entityUid="prox_sensor*:*95245A233">
+<Transform>
+<Rotation>5.5511151231129351e-16 -1.7694179454957193e-16 -1.0000000000000002 -0.044569710544519456 -0.99900627670799824 1.6712281899019836e-16 -0.99900627670799846 0.044569710544519463 -4.9960036108260678e-16</Rotation>
+<Translation>-0.020570971149627332 1.1439512624909858 1.3836861401371532</Translation>
+</Transform>
+</Instance>
+<Instance name="90576A137_Medium-Strength Steel Nylon-Insert Locknut-3" uid="90576A137_Medium-Strength Steel Nylon-Insert Locknut-3" entityUid="90576A137_Medium-Strength Steel Nylon-Insert Locknut*:*90576A137">
+<Transform>
+<Rotation>4.9960036108019188e-16 0 1 -0.47651933210219116 0.87916399274133217 2.6482332652802947e-16 -0.87916399274133239 -0.47651933210219133 4.4408920985134895e-16</Rotation>
+<Translation>0.047939028850372684 1.2209512624909857 1.4836861401371537</Translation>
+</Transform>
+</Instance>
+<Instance name="90576A137_Medium-Strength Steel Nylon-Insert Locknut-4" uid="90576A137_Medium-Strength Steel Nylon-Insert Locknut-4" entityUid="90576A137_Medium-Strength Steel Nylon-Insert Locknut*:*90576A137">
+<Transform>
+<Rotation>1.1102230246380145e-16 3.0531133177187861e-16 -0.99999999999999989 0.026781687779811332 0.99964130626923609 3.0817518315242218e-16 0.99964130626923609 -0.026781687779811335 1.0280572669677987e-16</Rotation>
+<Translation>-0.022960971149627307 1.2209512624909857 1.4836861401371535</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-1" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-1" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0474444016530686e-14 0 -1 0 0.99999999999999978 0 1 0 1.0474444016528114e-14</Rotation>
+<Translation>-0.010210971149610337 1.1142527776811477 1.6193846249469896</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-4" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-4" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0474444016530686e-14 0 -1 0 0.99999999999999978 0 1 0 1.0474444016528114e-14</Rotation>
+<Translation>-0.010210971149610643 1.1019512624909862 1.5896861401371529</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A710_Alloy Steel Shoulder Screw-4" uid="91259A710_Alloy Steel Shoulder Screw-4" entityUid="91259A710_Alloy Steel Shoulder Screw*:*91259A710">
+<Transform>
+<Rotation>0 0 -0.99999999999999989 0.99999998839852511 -0.00015232514287644695 0 -0.000152325142876447 -0.99999998839852533 0</Rotation>
+<Translation>-0.016960971149627302 1.1066512624909859 1.3360261401371532</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A710_Alloy Steel Shoulder Screw-7" uid="91259A710_Alloy Steel Shoulder Screw-7" entityUid="91259A710_Alloy Steel Shoulder Screw*:*91259A710">
+<Transform>
+<Rotation>0 0 -0.99999999999999989 0.99999998839852511 -0.00015232514287644695 0 -0.000152325142876447 -0.99999998839852533 0</Rotation>
+<Translation>-0.01696097114962733 1.1066512624909863 1.7373461401371533</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A710_Alloy Steel Shoulder Screw-5" uid="91259A710_Alloy Steel Shoulder Screw-5" entityUid="91259A710_Alloy Steel Shoulder Screw*:*91259A710">
+<Transform>
+<Rotation>0 0 -0.99999999999999989 0.99999998839852511 -0.00015232514287644695 0 -0.000152325142876447 -0.99999998839852533 0</Rotation>
+<Translation>-0.016960971149627302 1.2336512624909859 1.7373461401371535</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A710_Alloy Steel Shoulder Screw-8" uid="91259A710_Alloy Steel Shoulder Screw-8" entityUid="91259A710_Alloy Steel Shoulder Screw*:*91259A710">
+<Transform>
+<Rotation>0 0 -0.99999999999999989 0.99999998839852511 -0.00015232514287644695 0 -0.000152325142876447 -0.99999998839852533 0</Rotation>
+<Translation>-0.01696097114962733 1.1066512624909863 1.7754461401371531</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A710_Alloy Steel Shoulder Screw-2" uid="91259A710_Alloy Steel Shoulder Screw-2" entityUid="91259A710_Alloy Steel Shoulder Screw*:*91259A710">
+<Transform>
+<Rotation>0 0 -0.99999999999999989 0.99999998839852511 -0.00015232514287644695 0 -0.000152325142876447 -0.99999998839852533 0</Rotation>
+<Translation>-0.016960971149627302 1.2336512624909857 1.3360261401371532</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A710_Alloy Steel Shoulder Screw-3" uid="91259A710_Alloy Steel Shoulder Screw-3" entityUid="91259A710_Alloy Steel Shoulder Screw*:*91259A710">
+<Transform>
+<Rotation>0 0 -0.99999999999999989 0.99999998839852511 -0.00015232514287644695 0 -0.000152325142876447 -0.99999998839852533 0</Rotation>
+<Translation>-0.016960971149627302 1.1066512624909859 1.2979261401371531</Translation>
+</Transform>
+</Instance>
+<Instance name="prox_sensor-2" uid="prox_sensor-2" entityUid="prox_sensor*:*95245A233">
+<Transform>
+<Rotation>-9.436895709326691e-16 -1.0000680839006119e-15 -0.99999999999999989 -0.0098551491286899846 -0.9999514368386353 1.0093197188856086e-15 -0.9999514368386353 0.0098551491286899846 9.3378792227807401e-16</Rotation>
+<Translation>-0.020570971149627304 1.143951262490986 1.6896861401371532</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A710_Alloy Steel Shoulder Screw-6" uid="91259A710_Alloy Steel Shoulder Screw-6" entityUid="91259A710_Alloy Steel Shoulder Screw*:*91259A710">
+<Transform>
+<Rotation>0 0 -0.99999999999999989 0.99999998839852511 -0.00015232514287644695 0 -0.000152325142876447 -0.99999998839852533 0</Rotation>
+<Translation>-0.016960971149627302 1.2336512624909859 1.7754461401371533</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-3" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-3" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0474444016530686e-14 0 -1 0 0.99999999999999978 0 1 0 1.0474444016528114e-14</Rotation>
+<Translation>-0.010210971149610337 1.1736497473008209 1.6193846249469883</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-2" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-2" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0474444016530686e-14 0 -1 0 0.99999999999999978 0 1 0 1.0474444016528114e-14</Rotation>
+<Translation>-0.010210971149610198 1.1439512624909813 1.6316861401371583</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-5" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-5" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0474444016530686e-14 0 -1 0 0.99999999999999978 0 1 0 1.0474444016528114e-14</Rotation>
+<Translation>-0.010210971149610948 1.1142527776811542 1.55998765532732</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-13" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-13" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0474444016530686e-14 0 -1 0 0.99999999999999978 0 1 0 1.0474444016528114e-14</Rotation>
+<Translation>-0.010210971149612197 1.1439512624909811 1.4416861401371484</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-14" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-14" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0474444016530686e-14 0 -1 0 0.99999999999999978 0 1 0 1.0474444016528114e-14</Rotation>
+<Translation>-0.010210971149612058 1.1736497473008207 1.4539876553273183</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-10" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-10" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0474444016530686e-14 0 -1 0 0.99999999999999978 0 1 0 1.0474444016528114e-14</Rotation>
+<Translation>-0.010210971149611309 1.1439512624909902 1.5256861401371484</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-7" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-7" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0474444016530686e-14 0 -1 0 0.99999999999999978 0 1 0 1.0474444016528114e-14</Rotation>
+<Translation>-0.010210971149610948 1.1736497473008209 1.5599876553273182</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-8" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-8" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0474444016530686e-14 0 -1 0 0.99999999999999978 0 1 0 1.0474444016528114e-14</Rotation>
+<Translation>-0.010210971149611447 1.1736497473008207 1.5133846249469882</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-9" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-9" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0474444016530686e-14 0 -1 0 0.99999999999999978 0 1 0 1.0474444016528114e-14</Rotation>
+<Translation>-0.010210971149611447 1.1142527776811535 1.5133846249469864</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-6" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-6" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0474444016530686e-14 0 -1 0 0.99999999999999978 0 1 0 1.0474444016528114e-14</Rotation>
+<Translation>-0.010210971149611087 1.1439512624909904 1.547686140137158</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-11" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-11" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0474444016530686e-14 0 -1 0 0.99999999999999978 0 1 0 1.0474444016528114e-14</Rotation>
+<Translation>-0.010210971149611753 1.1019512624909855 1.4836861401371533</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-12" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-12" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0474444016530686e-14 0 -1 0 0.99999999999999978 0 1 0 1.0474444016528114e-14</Rotation>
+<Translation>-0.010210971149612058 1.1142527776811475 1.453987655327317</Translation>
+</Transform>
+</Instance>
+<Instance name="MotorStator-1" uid="MotorStator-1" entityUid="MotorStator*:*Default">
+<Transform>
+<Rotation>-3.4914813388418467e-15 -1.3965925355372529e-14 1 -6.9829626776862793e-15 -0.99999999999999978 -1.396592535537256e-14 1 -6.9829626776862036e-15 3.4914813388443222e-15</Rotation>
+<Translation>-0.0042609711496168767 1.1439512624909607 1.5896861401371714</Translation>
+</Transform>
+</Instance>
+<Instance name="MotorStator-2" uid="MotorStator-2" entityUid="MotorStator*:*Default">
+<Transform>
+<Rotation>-3.4914813388418467e-15 -1.3965925355372529e-14 1 -6.9829626776862793e-15 -0.99999999999999978 -1.396592535537256e-14 1 -6.9829626776862036e-15 3.4914813388443222e-15</Rotation>
+<Translation>-0.0042609711496164882 1.1439512624909542 1.4836861401371775</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="Base_Side_a-3" uid="Base_Side_a-3" entityUid="Base_Side_a" rigid="true">
+<Transform>
+<Rotation>-0.49999999999999983 -4.8197814706848947e-15 -0.86602540378443871 0.86602540378443871 -4.3737426584395474e-15 -0.49999999999999983 -1.3778815164818544e-15 -1 6.3609245235223957e-15</Rotation>
+<Translation>1.4166246128349873 0.6196576114447605 1.1439512624909574</Translation>
+</Transform>
+<Instance name="base_plate_corner_connector_mm-1" uid="base_plate_corner_connector_mm-1" entityUid="base_plate_corner_connector_mm*:*Default">
+<Transform>
+<Rotation>-0.86602540378443826 -1.0185943702609057e-16 0.50000000000000089 0 1 2.2592000048737674e-16 -0.50000000000000078 2.020613728069743e-16 -0.86602540378443815</Rotation>
+<Translation>0.01342695468952379 1.0939512624909864 1.5206174745266536</Translation>
+</Transform>
+</Instance>
+<Instance name="1942K49_303 Stainless Steel Rigid Leveling Mount with Nylon Cushion-1" uid="1942K49_303 Stainless Steel Rigid Leveling Mount with Nylon Cushion-1" entityUid="1942K49_303 Stainless Steel Rigid Leveling Mount with Nylon Cushion*:*1942K49">
+<Transform>
+<Rotation>-0.80901699437494634 0 -0.58778525229247447 -3.3189340297925518e-15 -1 4.4437995310872494e-15 -0.58778525229247447 5.5459298162886585e-15 0.80901699437494634</Rotation>
+<Translation>0.035636159507388271 1.2717512624909966 1.7723334185313546</Translation>
+</Transform>
+</Instance>
+<Instance name="spacer-2" uid="spacer-2" entityUid="spacer*:*Default">
+<Transform>
+<Rotation>1.2290732959925328e-16 2.7755575615628031e-16 0.99999999999999989 1 0 -1.2290732959931777e-16 0 0.99999999999999989 -2.7755575615629712e-16</Rotation>
+<Translation>-0.0042609711496272296 1.2209512624909862 1.4836861401371533</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A710_Alloy Steel Shoulder Screw-1" uid="91259A710_Alloy Steel Shoulder Screw-1" entityUid="91259A710_Alloy Steel Shoulder Screw*:*91259A710">
+<Transform>
+<Rotation>0 0 -0.99999999999999978 0.99999998839852533 -0.000152325142876447 0 -0.000152325142876447 -0.99999998839852533 0</Rotation>
+<Translation>-0.016960971149627357 1.2336512624909861 1.2979261401371529</Translation>
+</Transform>
+</Instance>
+<Instance name="90576A137_Medium-Strength Steel Nylon-Insert Locknut-2" uid="90576A137_Medium-Strength Steel Nylon-Insert Locknut-2" entityUid="90576A137_Medium-Strength Steel Nylon-Insert Locknut*:*90576A137">
+<Transform>
+<Rotation>0 3.2816080798850433e-16 -1.0000000000000002 6.5265460044871326e-15 1 3.2816080798856902e-16 1.0000000000000002 -6.5265460044870931e-15 0</Rotation>
+<Translation>-0.022960971149627307 1.2209512624909862 1.5896861401371529</Translation>
+</Transform>
+</Instance>
+<Instance name="95245A233_Grade B7 Medium-Strength Steel Threaded Rod-2" uid="95245A233_Grade B7 Medium-Strength Steel Threaded Rod-2" entityUid="95245A233_Grade B7 Medium-Strength Steel Threaded Rod*:*95245A233">
+<Transform>
+<Rotation>0 1.3425839812350602e-16 -1.0000000000000002 6.5359667178466197e-15 1 1.3425839812357091e-16 1.0000000000000002 -6.5359667178465795e-15 0</Rotation>
+<Translation>0.012389028850372713 1.2209512624909862 1.5896861401371534</Translation>
+</Transform>
+</Instance>
+<Instance name="base_plate_corner_connector_mm-2" uid="base_plate_corner_connector_mm-2" entityUid="base_plate_corner_connector_mm*:*Default">
+<Transform>
+<Rotation>-0.86602540378443815 0 0.50000000000000056 2.8311196401792625e-15 -1 4.8552710362488681e-15 0.50000000000000056 5.6203478797399097e-15 0.86602540378443815</Rotation>
+<Translation>0.013426954689523818 1.2463512624909954 1.552754805747645</Translation>
+</Transform>
+</Instance>
+<Instance name="90576A137_Medium-Strength Steel Nylon-Insert Locknut-1" uid="90576A137_Medium-Strength Steel Nylon-Insert Locknut-1" entityUid="90576A137_Medium-Strength Steel Nylon-Insert Locknut*:*90576A137">
+<Transform>
+<Rotation>0 -1.939116110253144e-16 1.0000000000000002 -5.6329966901724147e-15 1 1.7426372020875993e-16 -1.0000000000000002 -5.6472717184361618e-15 0</Rotation>
+<Translation>0.047939028850372711 1.2209512624909862 1.5896861401371531</Translation>
+</Transform>
+</Instance>
+<Instance name="bumper-1" uid="bumper-1" entityUid="bumper*:*Default">
+<Transform>
+<Rotation>0 1.3425839812350464e-16 -1.0000000000000002 0 1 1.3425839812357091e-16 1.0000000000000002 0 0</Rotation>
+<Translation>0.041939028850372734 1.2209512624909862 1.5366861401371532</Translation>
+</Transform>
+</Instance>
+<Instance name="base_plate_mm-1" uid="base_plate_mm-1" grounded="true" entityUid="base_plate_mm*:*Default">
+<Transform>
+<Rotation>1 0 0 0 0 -1 0 1 0</Rotation>
+<Translation>-0.010610971149627335 1.1701512624909862 1.536686140137153</Translation>
+</Transform>
+</Instance>
+<Instance name="spacer-1" uid="spacer-1" entityUid="spacer*:*Default">
+<Transform>
+<Rotation>3.3306690738755579e-16 0 1 0 1 0 -1 0 3.3306690738753819e-16</Rotation>
+<Translation>-0.0042609711496273406 1.2209512624909862 1.5896861401371529</Translation>
+</Transform>
+</Instance>
+<Instance name="95245A233_Grade B7 Medium-Strength Steel Threaded Rod-1" uid="95245A233_Grade B7 Medium-Strength Steel Threaded Rod-1" entityUid="95245A233_Grade B7 Medium-Strength Steel Threaded Rod*:*95245A233">
+<Transform>
+<Rotation>-5.1820951974059698e-16 0 -0.99999999999999978 0.026781687779811391 0.99964130626923609 0 0.99964130626923609 -0.026781687779811388 -6.1062266354382673e-16</Rotation>
+<Translation>0.012389028850372685 1.2209512624909862 1.4836861401371533</Translation>
+</Transform>
+</Instance>
+<Instance name="prox_sensor-1" uid="prox_sensor-1" entityUid="prox_sensor*:*95245A233">
+<Transform>
+<Rotation>6.0472203442086292e-16 -1.795530851013112e-16 -1 -0.04456971054451947 -0.99900627670799824 1.5316674244225763e-16 -0.99900627670799835 0.044569710544519463 -5.5511151231257048e-16</Rotation>
+<Translation>-0.020570971149627276 1.1439512624909862 1.383686140137153</Translation>
+</Transform>
+</Instance>
+<Instance name="90576A137_Medium-Strength Steel Nylon-Insert Locknut-3" uid="90576A137_Medium-Strength Steel Nylon-Insert Locknut-3" entityUid="90576A137_Medium-Strength Steel Nylon-Insert Locknut*:*90576A137">
+<Transform>
+<Rotation>4.5363584467527652e-16 0 0.99999999999999989 -0.47651933210219127 0.87916399274133239 2.648233265280025e-16 -0.87916399274133239 -0.47651933210219133 4.4408920985005216e-16</Rotation>
+<Translation>0.047939028850372684 1.220951262490986 1.4836861401371535</Translation>
+</Transform>
+</Instance>
+<Instance name="90576A137_Medium-Strength Steel Nylon-Insert Locknut-4" uid="90576A137_Medium-Strength Steel Nylon-Insert Locknut-4" entityUid="90576A137_Medium-Strength Steel Nylon-Insert Locknut*:*90576A137">
+<Transform>
+<Rotation>1.4792429503449692e-16 3.0532817086649045e-16 -1 0.026781687779811346 0.99964130626923609 3.0918031385043764e-16 0.9996413062692362 -0.026781687779811342 1.3969403177471312e-16</Rotation>
+<Translation>-0.022960971149627307 1.2209512624909862 1.4836861401371533</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-1" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-1" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0436096431476462e-14 0 -1 0 1 0 1 0 1.0436096431476481e-14</Rotation>
+<Translation>-0.010210971149610337 1.1142527776811479 1.6193846249469894</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-4" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-4" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0436096431476462e-14 0 -1 0 1 0 1 0 1.0436096431476481e-14</Rotation>
+<Translation>-0.010210971149610615 1.1019512624909864 1.5896861401371527</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A710_Alloy Steel Shoulder Screw-4" uid="91259A710_Alloy Steel Shoulder Screw-4" entityUid="91259A710_Alloy Steel Shoulder Screw*:*91259A710">
+<Transform>
+<Rotation>0 0 -0.99999999999999978 0.99999998839852533 -0.000152325142876447 0 -0.000152325142876447 -0.99999998839852533 0</Rotation>
+<Translation>-0.016960971149627274 1.1066512624909863 1.3360261401371529</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A710_Alloy Steel Shoulder Screw-7" uid="91259A710_Alloy Steel Shoulder Screw-7" entityUid="91259A710_Alloy Steel Shoulder Screw*:*91259A710">
+<Transform>
+<Rotation>0 0 -0.99999999999999978 0.99999998839852533 -0.000152325142876447 0 -0.000152325142876447 -0.99999998839852533 0</Rotation>
+<Translation>-0.01696097114962733 1.1066512624909866 1.7373461401371528</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A710_Alloy Steel Shoulder Screw-5" uid="91259A710_Alloy Steel Shoulder Screw-5" entityUid="91259A710_Alloy Steel Shoulder Screw*:*91259A710">
+<Transform>
+<Rotation>0 0 -0.99999999999999978 0.99999998839852533 -0.000152325142876447 0 -0.000152325142876447 -0.99999998839852533 0</Rotation>
+<Translation>-0.016960971149627274 1.2336512624909861 1.7373461401371533</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A710_Alloy Steel Shoulder Screw-8" uid="91259A710_Alloy Steel Shoulder Screw-8" entityUid="91259A710_Alloy Steel Shoulder Screw*:*91259A710">
+<Transform>
+<Rotation>0 0 -0.99999999999999978 0.99999998839852533 -0.000152325142876447 0 -0.000152325142876447 -0.99999998839852533 0</Rotation>
+<Translation>-0.016960971149627357 1.1066512624909866 1.7754461401371526</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A710_Alloy Steel Shoulder Screw-2" uid="91259A710_Alloy Steel Shoulder Screw-2" entityUid="91259A710_Alloy Steel Shoulder Screw*:*91259A710">
+<Transform>
+<Rotation>0 0 -0.99999999999999978 0.99999998839852533 -0.000152325142876447 0 -0.000152325142876447 -0.99999998839852533 0</Rotation>
+<Translation>-0.016960971149627246 1.2336512624909861 1.3360261401371529</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A710_Alloy Steel Shoulder Screw-3" uid="91259A710_Alloy Steel Shoulder Screw-3" entityUid="91259A710_Alloy Steel Shoulder Screw*:*91259A710">
+<Transform>
+<Rotation>0 0 -0.99999999999999978 0.99999998839852533 -0.000152325142876447 0 -0.000152325142876447 -0.99999998839852533 0</Rotation>
+<Translation>-0.016960971149627385 1.1066512624909863 1.2979261401371527</Translation>
+</Transform>
+</Instance>
+<Instance name="prox_sensor-2" uid="prox_sensor-2" entityUid="prox_sensor*:*95245A233">
+<Transform>
+<Rotation>-9.5726879875796857e-16 -1.0005122461744726e-15 -0.99999999999999989 -0.0098551491286899898 -0.9999514368386353 1.1021387725417252e-15 -0.99995143683863541 0.0098551491286899568 8.8817841970012701e-16</Rotation>
+<Translation>-0.020570971149627276 1.1439512624909864 1.6896861401371528</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A710_Alloy Steel Shoulder Screw-6" uid="91259A710_Alloy Steel Shoulder Screw-6" entityUid="91259A710_Alloy Steel Shoulder Screw*:*91259A710">
+<Transform>
+<Rotation>0 0 -0.99999999999999978 0.99999998839852533 -0.000152325142876447 0 -0.000152325142876447 -0.99999998839852533 0</Rotation>
+<Translation>-0.01696097114962733 1.2336512624909861 1.7754461401371529</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-3" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-3" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0436096431476462e-14 0 -1 0 1 0 1 0 1.0436096431476481e-14</Rotation>
+<Translation>-0.010210971149610337 1.1736497473008214 1.6193846249469881</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-2" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-2" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0436096431476462e-14 0 -1 0 1 0 1 0 1.0436096431476481e-14</Rotation>
+<Translation>-0.010210971149610254 1.1439512624909816 1.6316861401371581</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-5" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-5" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0436096431476462e-14 0 -1 0 1 0 1 0 1.0436096431476481e-14</Rotation>
+<Translation>-0.010210971149610892 1.1142527776811544 1.5599876553273198</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-13" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-13" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0436096431476462e-14 0 -1 0 1 0 1 0 1.0436096431476481e-14</Rotation>
+<Translation>-0.010210971149612086 1.1439512624909816 1.4416861401371484</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-14" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-14" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0436096431476462e-14 0 -1 0 1 0 1 0 1.0436096431476481e-14</Rotation>
+<Translation>-0.010210971149611919 1.1736497473008212 1.4539876553273183</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-10" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-10" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0436096431476462e-14 0 -1 0 1 0 1 0 1.0436096431476481e-14</Rotation>
+<Translation>-0.010210971149611309 1.1439512624909907 1.5256861401371482</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-7" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-7" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0436096431476462e-14 0 -1 0 1 0 1 0 1.0436096431476481e-14</Rotation>
+<Translation>-0.010210971149611003 1.1736497473008212 1.559987655327318</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-8" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-8" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0436096431476462e-14 0 -1 0 1 0 1 0 1.0436096431476481e-14</Rotation>
+<Translation>-0.010210971149611364 1.1736497473008212 1.513384624946988</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-9" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-9" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0436096431476462e-14 0 -1 0 1 0 1 0 1.0436096431476481e-14</Rotation>
+<Translation>-0.010210971149611336 1.1142527776811539 1.5133846249469862</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-6" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-6" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0436096431476462e-14 0 -1 0 1 0 1 0 1.0436096431476481e-14</Rotation>
+<Translation>-0.010210971149611198 1.1439512624909907 1.5476861401371578</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-11" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-11" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0436096431476462e-14 0 -1 0 1 0 1 0 1.0436096431476481e-14</Rotation>
+<Translation>-0.010210971149611697 1.101951262490986 1.4836861401371531</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-12" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-12" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0436096431476462e-14 0 -1 0 1 0 1 0 1.0436096431476481e-14</Rotation>
+<Translation>-0.010210971149612114 1.1142527776811479 1.4539876553273166</Translation>
+</Transform>
+</Instance>
+<Instance name="MotorStator-1" uid="MotorStator-1" entityUid="MotorStator*:*Default">
+<Transform>
+<Rotation>-3.5527136788005191e-15 -1.3965925355372502e-14 0.99999999999999989 -6.9829626776861981e-15 -1 -1.396592535537259e-14 0.99999999999999989 -6.982962677686288e-15 3.5527136788005814e-15</Rotation>
+<Translation>-0.0042609711496169322 1.1439512624909609 1.5896861401371711</Translation>
+</Transform>
+</Instance>
+<Instance name="MotorStator-2" uid="MotorStator-2" entityUid="MotorStator*:*Default">
+<Transform>
+<Rotation>-3.5527136788005191e-15 -1.3965925355372502e-14 0.99999999999999989 -6.9829626776861981e-15 -1 -1.396592535537259e-14 0.99999999999999989 -6.982962677686288e-15 3.5527136788005814e-15</Rotation>
+<Translation>-0.0042609711496164604 1.1439512624909547 1.4836861401371773</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="Base_Side_a-2" uid="Base_Side_a-2" entityUid="Base_Side_a" rigid="true">
+<Transform>
+<Rotation>-0.50000000000000089 -2.1898047163226607e-16 0.86602540378443815 -0.86602540378443815 -4.863090853220556e-16 -0.50000000000000089 5.3064625779621445e-16 -1 0</Rotation>
+<Translation>-1.2449938571694688 0.91702852869239493 1.1439512624909578</Translation>
+</Transform>
+<Instance name="base_plate_corner_connector_mm-1" uid="base_plate_corner_connector_mm-1" entityUid="base_plate_corner_connector_mm*:*Default">
+<Transform>
+<Rotation>-0.86602540378443849 -1.0185943702606548e-16 0.50000000000000089 0 1 2.2592000048741095e-16 -0.50000000000000078 2.0206137280694871e-16 -0.86602540378443815</Rotation>
+<Translation>0.013426954689523679 1.0939512624909866 1.5206174745266543</Translation>
+</Transform>
+</Instance>
+<Instance name="1942K49_303 Stainless Steel Rigid Leveling Mount with Nylon Cushion-1" uid="1942K49_303 Stainless Steel Rigid Leveling Mount with Nylon Cushion-1" entityUid="1942K49_303 Stainless Steel Rigid Leveling Mount with Nylon Cushion*:*1942K49">
+<Transform>
+<Rotation>-0.80901699437494656 0 -0.58778525229247447 -3.3189340297925581e-15 -1 4.4437995310872146e-15 -0.58778525229247447 5.5459298162886838e-15 0.80901699437494656</Rotation>
+<Translation>0.035636159507388188 1.2717512624909968 1.7723334185313553</Translation>
+</Transform>
+</Instance>
+<Instance name="spacer-2" uid="spacer-2" entityUid="spacer*:*Default">
+<Transform>
+<Rotation>1.2290732959927863e-16 3.8857805861880484e-16 1 1 0 -1.2290732959929312e-16 0 1 -3.8857805861880474e-16</Rotation>
+<Translation>-0.0042609711496272573 1.2209512624909864 1.4836861401371537</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A710_Alloy Steel Shoulder Screw-1" uid="91259A710_Alloy Steel Shoulder Screw-1" entityUid="91259A710_Alloy Steel Shoulder Screw*:*91259A710">
+<Transform>
+<Rotation>0 0 -0.99999999999999978 0.99999998839852533 -0.000152325142876447 0 -0.000152325142876447 -0.99999998839852533 0</Rotation>
+<Translation>-0.016960971149627357 1.2336512624909863 1.2979261401371534</Translation>
+</Transform>
+</Instance>
+<Instance name="90576A137_Medium-Strength Steel Nylon-Insert Locknut-2" uid="90576A137_Medium-Strength Steel Nylon-Insert Locknut-2" entityUid="90576A137_Medium-Strength Steel Nylon-Insert Locknut*:*90576A137">
+<Transform>
+<Rotation>0 3.2816080798852977e-16 -1.0000000000000002 6.5265460044871073e-15 1 3.2816080798854328e-16 1.0000000000000002 -6.5265460044871184e-15 0</Rotation>
+<Translation>-0.02296097114962739 1.2209512624909864 1.5896861401371536</Translation>
+</Transform>
+</Instance>
+<Instance name="95245A233_Grade B7 Medium-Strength Steel Threaded Rod-2" uid="95245A233_Grade B7 Medium-Strength Steel Threaded Rod-2" entityUid="95245A233_Grade B7 Medium-Strength Steel Threaded Rod*:*95245A233">
+<Transform>
+<Rotation>0 1.3425839812353127e-16 -1.0000000000000002 6.5359667178465945e-15 1 1.3425839812354517e-16 1.0000000000000002 -6.5359667178466055e-15 0</Rotation>
+<Translation>0.012389028850372685 1.2209512624909864 1.5896861401371536</Translation>
+</Transform>
+</Instance>
+<Instance name="base_plate_corner_connector_mm-2" uid="base_plate_corner_connector_mm-2" entityUid="base_plate_corner_connector_mm*:*Default">
+<Transform>
+<Rotation>-0.86602540378443826 0 0.50000000000000067 2.8311196401792286e-15 -1 4.8552710362488594e-15 0.50000000000000067 5.6203478797399341e-15 0.86602540378443826</Rotation>
+<Translation>0.013426954689523707 1.2463512624909956 1.5527548057476457</Translation>
+</Transform>
+</Instance>
+<Instance name="90576A137_Medium-Strength Steel Nylon-Insert Locknut-1" uid="90576A137_Medium-Strength Steel Nylon-Insert Locknut-1" entityUid="90576A137_Medium-Strength Steel Nylon-Insert Locknut*:*90576A137">
+<Transform>
+<Rotation>0 -1.9391161102528936e-16 1.0000000000000002 -5.6329966901723894e-15 1 1.7426372020878566e-16 -1.0000000000000002 -5.6472717184361862e-15 0</Rotation>
+<Translation>0.047939028850372573 1.2209512624909866 1.5896861401371538</Translation>
+</Transform>
+</Instance>
+<Instance name="bumper-1" uid="bumper-1" entityUid="bumper*:*Default">
+<Transform>
+<Rotation>-1.6653345369377341e-16 1.3425839812353048e-16 -1 0 1 1.3425839812353048e-16 1 0 -1.6653345369377341e-16</Rotation>
+<Translation>0.041939028850372623 1.2209512624909864 1.5366861401371537</Translation>
+</Transform>
+</Instance>
+<Instance name="base_plate_mm-1" uid="base_plate_mm-1" grounded="true" entityUid="base_plate_mm*:*Default">
+<Transform>
+<Rotation>1 0 0 0 0 -1 0 1 0</Rotation>
+<Translation>-0.010610971149627335 1.1701512624909864 1.5366861401371534</Translation>
+</Transform>
+</Instance>
+<Instance name="spacer-1" uid="spacer-1" entityUid="spacer*:*Default">
+<Transform>
+<Rotation>2.7755575615628909e-16 0 1 0 1 0 -1 0 2.7755575615628918e-16</Rotation>
+<Translation>-0.0042609711496274238 1.2209512624909864 1.5896861401371536</Translation>
+</Transform>
+</Instance>
+<Instance name="95245A233_Grade B7 Medium-Strength Steel Threaded Rod-1" uid="95245A233_Grade B7 Medium-Strength Steel Threaded Rod-1" entityUid="95245A233_Grade B7 Medium-Strength Steel Threaded Rod*:*95245A233">
+<Transform>
+<Rotation>-5.1381196347914392e-16 0 -1 0.026781687779811391 0.99964130626923609 0 0.9996413062692362 -0.026781687779811391 -6.6613381477509392e-16</Rotation>
+<Translation>0.012389028850372769 1.2209512624909864 1.4836861401371537</Translation>
+</Transform>
+</Instance>
+<Instance name="prox_sensor-1" uid="prox_sensor-1" entityUid="prox_sensor*:*95245A233">
+<Transform>
+<Rotation>5.2325111119283014e-16 -1.7764823594850837e-16 -1.0000000000000002 -0.04456971054451947 -0.99900627670799846 1.6712281899020058e-16 -0.99900627670799846 0.044569710544519463 -4.9960036108132044e-16</Rotation>
+<Translation>-0.020570971149627332 1.1439512624909864 1.3836861401371534</Translation>
+</Transform>
+</Instance>
+<Instance name="90576A137_Medium-Strength Steel Nylon-Insert Locknut-3" uid="90576A137_Medium-Strength Steel Nylon-Insert Locknut-3" entityUid="90576A137_Medium-Strength Steel Nylon-Insert Locknut*:*90576A137">
+<Transform>
+<Rotation>4.7490780527261067e-16 0 1 -0.47651933210219127 0.87916399274133239 2.6482332652802744e-16 -0.87916399274133239 -0.47651933210219133 3.8857805861880479e-16</Rotation>
+<Translation>0.047939028850372628 1.2209512624909864 1.4836861401371539</Translation>
+</Transform>
+</Instance>
+<Instance name="90576A137_Medium-Strength Steel Nylon-Insert Locknut-4" uid="90576A137_Medium-Strength Steel Nylon-Insert Locknut-4" entityUid="90576A137_Medium-Strength Steel Nylon-Insert Locknut*:*90576A137">
+<Transform>
+<Rotation>1.5232185129595e-16 3.0568079711053141e-16 -1.0000000000000002 0.026781687779811339 0.99964130626923609 3.0763542054432205e-16 0.99964130626923609 -0.026781687779811346 0</Rotation>
+<Translation>-0.022960971149627363 1.2209512624909862 1.4836861401371537</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-1" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-1" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0491607582707729e-14 0 -1 0 1 0 1 0 1.0491607582707729e-14</Rotation>
+<Translation>-0.010210971149610365 1.1142527776811482 1.6193846249469899</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-4" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-4" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0491607582707729e-14 0 -1 0 1 0 1 0 1.0491607582707729e-14</Rotation>
+<Translation>-0.010210971149610698 1.1019512624909866 1.5896861401371534</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A710_Alloy Steel Shoulder Screw-4" uid="91259A710_Alloy Steel Shoulder Screw-4" entityUid="91259A710_Alloy Steel Shoulder Screw*:*91259A710">
+<Transform>
+<Rotation>0 0 -0.99999999999999978 0.99999998839852533 -0.000152325142876447 0 -0.000152325142876447 -0.99999998839852533 0</Rotation>
+<Translation>-0.01696097114962733 1.1066512624909866 1.3360261401371536</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A710_Alloy Steel Shoulder Screw-7" uid="91259A710_Alloy Steel Shoulder Screw-7" entityUid="91259A710_Alloy Steel Shoulder Screw*:*91259A710">
+<Transform>
+<Rotation>0 0 -0.99999999999999978 0.99999998839852533 -0.000152325142876447 0 -0.000152325142876447 -0.99999998839852533 0</Rotation>
+<Translation>-0.016960971149627385 1.1066512624909868 1.7373461401371537</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A710_Alloy Steel Shoulder Screw-5" uid="91259A710_Alloy Steel Shoulder Screw-5" entityUid="91259A710_Alloy Steel Shoulder Screw*:*91259A710">
+<Transform>
+<Rotation>0 0 -0.99999999999999978 0.99999998839852533 -0.000152325142876447 0 -0.000152325142876447 -0.99999998839852533 0</Rotation>
+<Translation>-0.016960971149627357 1.2336512624909863 1.7373461401371537</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A710_Alloy Steel Shoulder Screw-8" uid="91259A710_Alloy Steel Shoulder Screw-8" entityUid="91259A710_Alloy Steel Shoulder Screw*:*91259A710">
+<Transform>
+<Rotation>0 0 -0.99999999999999978 0.99999998839852533 -0.000152325142876447 0 -0.000152325142876447 -0.99999998839852533 0</Rotation>
+<Translation>-0.016960971149627385 1.1066512624909868 1.7754461401371535</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A710_Alloy Steel Shoulder Screw-2" uid="91259A710_Alloy Steel Shoulder Screw-2" entityUid="91259A710_Alloy Steel Shoulder Screw*:*91259A710">
+<Transform>
+<Rotation>0 0 -0.99999999999999978 0.99999998839852533 -0.000152325142876447 0 -0.000152325142876447 -0.99999998839852533 0</Rotation>
+<Translation>-0.016960971149627302 1.2336512624909863 1.3360261401371534</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A710_Alloy Steel Shoulder Screw-3" uid="91259A710_Alloy Steel Shoulder Screw-3" entityUid="91259A710_Alloy Steel Shoulder Screw*:*91259A710">
+<Transform>
+<Rotation>0 0 -0.99999999999999978 0.99999998839852533 -0.000152325142876447 0 -0.000152325142876447 -0.99999998839852533 0</Rotation>
+<Translation>-0.016960971149627385 1.1066512624909866 1.2979261401371534</Translation>
+</Transform>
+</Instance>
+<Instance name="prox_sensor-2" uid="prox_sensor-2" entityUid="prox_sensor*:*95245A233">
+<Transform>
+<Rotation>-8.8294882169496231e-16 -9.9940561787517436e-16 -1 -0.0098551491286899898 -0.9999514368386353 1.1021387725416998e-15 -0.99995143683863563 0.0098551491286899568 8.8817841970012513e-16</Rotation>
+<Translation>-0.020570971149627304 1.1439512624909864 1.6896861401371535</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A710_Alloy Steel Shoulder Screw-6" uid="91259A710_Alloy Steel Shoulder Screw-6" entityUid="91259A710_Alloy Steel Shoulder Screw*:*91259A710">
+<Transform>
+<Rotation>0 0 -0.99999999999999978 0.99999998839852533 -0.000152325142876447 0 -0.000152325142876447 -0.99999998839852533 0</Rotation>
+<Translation>-0.016960971149627385 1.2336512624909863 1.7754461401371535</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-3" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-3" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0491607582707729e-14 0 -1 0 1 0 1 0 1.0491607582707729e-14</Rotation>
+<Translation>-0.010210971149610365 1.1736497473008214 1.6193846249469885</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-2" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-2" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0491607582707729e-14 0 -1 0 1 0 1 0 1.0491607582707729e-14</Rotation>
+<Translation>-0.010210971149610365 1.1439512624909818 1.6316861401371587</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-5" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-5" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0491607582707729e-14 0 -1 0 1 0 1 0 1.0491607582707729e-14</Rotation>
+<Translation>-0.01021097114961092 1.1142527776811546 1.5599876553273202</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-13" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-13" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0491607582707729e-14 0 -1 0 1 0 1 0 1.0491607582707729e-14</Rotation>
+<Translation>-0.010210971149612169 1.1439512624909818 1.4416861401371486</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-14" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-14" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0491607582707729e-14 0 -1 0 1 0 1 0 1.0491607582707729e-14</Rotation>
+<Translation>-0.010210971149612141 1.1736497473008214 1.4539876553273188</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-10" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-10" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0491607582707729e-14 0 -1 0 1 0 1 0 1.0491607582707729e-14</Rotation>
+<Translation>-0.010210971149611392 1.1439512624909909 1.5256861401371489</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-7" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-7" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0491607582707729e-14 0 -1 0 1 0 1 0 1.0491607582707729e-14</Rotation>
+<Translation>-0.010210971149610976 1.1736497473008214 1.5599876553273184</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-8" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-8" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0491607582707729e-14 0 -1 0 1 0 1 0 1.0491607582707729e-14</Rotation>
+<Translation>-0.010210971149611475 1.1736497473008214 1.5133846249469884</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-9" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-9" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0491607582707729e-14 0 -1 0 1 0 1 0 1.0491607582707729e-14</Rotation>
+<Translation>-0.010210971149611392 1.1142527776811542 1.5133846249469867</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-6" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-6" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0491607582707729e-14 0 -1 0 1 0 1 0 1.0491607582707729e-14</Rotation>
+<Translation>-0.010210971149611114 1.1439512624909909 1.5476861401371582</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-11" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-11" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0491607582707729e-14 0 -1 0 1 0 1 0 1.0491607582707729e-14</Rotation>
+<Translation>-0.010210971149611753 1.1019512624909862 1.4836861401371535</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-12" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-12" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1.0491607582707729e-14 0 -1 0 1 0 1 0 1.0491607582707729e-14</Rotation>
+<Translation>-0.010210971149612114 1.1142527776811482 1.4539876553273174</Translation>
+</Transform>
+</Instance>
+<Instance name="MotorStator-1" uid="MotorStator-1" entityUid="MotorStator*:*Default">
+<Transform>
+<Rotation>-3.4972025275692396e-15 -1.3965925355372527e-14 1 -6.9829626776862241e-15 -1 -1.3965925355372567e-14 1 -6.982962677686262e-15 3.4972025275692439e-15</Rotation>
+<Translation>-0.004260971149616849 1.1439512624909611 1.5896861401371716</Translation>
+</Transform>
+</Instance>
+<Instance name="MotorStator-2" uid="MotorStator-2" entityUid="MotorStator*:*Default">
+<Transform>
+<Rotation>-3.4972025275692396e-15 -1.3965925355372527e-14 1 -6.9829626776862241e-15 -1 -1.3965925355372567e-14 1 -6.982962677686262e-15 3.4972025275692439e-15</Rotation>
+<Translation>-0.0042609711496166269 1.1439512624909549 1.4836861401371779</Translation>
+</Transform>
+</Instance>
+</Instance>
+</Instance>
+<Instance name="MotorRotor_a-2" uid="MotorRotor_a-2" entityUid="MotorRotor_a" rigid="true">
+<Transform>
+<Rotation>1.3974932322469158e-14 -3.5004551340866996e-15 1 -4.8284293230338449e-14 1 3.5006177644125724e-15 -0.99999999999999989 -4.8282558506862472e-14 1.3981871216373065e-14</Rotation>
+<Translation>-1.4446307316149289 -0.94018268918791981 0.68606456603132882</Translation>
+</Transform>
+<Instance name="ball-1" uid="ball-1" entityUid="ball*:*6960T431">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130206 0.76019518918797502 1.3285068696149336</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-2" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-2" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>0.88613883141072392 0.46341986520436984 0 -0.46341986520436995 0.88613883141072414 0 0 0 1</Rotation>
+<Translation>0.67307418497453031 0.89468268918797422 1.3081043696149333</Translation>
+</Transform>
+</Instance>
+<Instance name="90790A185_Black-Oxide Steel High-Heavy-Profile Cap Nut-1" uid="90790A185_Black-Oxide Steel High-Heavy-Profile Cap Nut-1" entityUid="90790A185_Black-Oxide Steel High-Heavy-Profile Cap Nut*:*90790A185">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130195 0.78718268918797496 1.2951693696149338</Translation>
+</Transform>
+</Instance>
+<Instance name="93413A312_Black Super-Corrosion-Resistant-Coated Steel Washer-1" uid="93413A312_Black Super-Corrosion-Resistant-Coated Steel Washer-1" entityUid="93413A312_Black Super-Corrosion-Resistant-Coated Steel Washer*:*93413A312">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130184 0.78718268918797485 1.3161243696149336</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-3" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-3" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>0.14120295625654489 0.98998066907612492 0 -0.98998066907612514 0.14120295625654494 0 0 0 1</Rotation>
+<Translation>0.68606456603129773 0.87218268918797481 1.3081043696149333</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A628_Alloy Steel Shoulder Screw-1" uid="91259A628_Alloy Steel Shoulder Screw-1" entityUid="91259A628_Alloy Steel Shoulder Screw*:*91259A628">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130184 0.78718268918797485 1.3396193696149339</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-1" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-1" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.69905494708806348 0.89468268918797533 1.3081043696149333</Translation>
+</Transform>
+</Instance>
+<Instance name="MotorRotor-1" uid="MotorRotor-1" grounded="true" entityUid="MotorRotor*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130028 0.88718268918797194 1.3021543696149334</Translation>
+</Transform>
+</Instance>
+<Instance name="92510A494_Aluminum Unthreaded Spacer-1" uid="92510A494_Aluminum Unthreaded Spacer-1" entityUid="92510A494_Aluminum Unthreaded Spacer*:*92510A494">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130184 0.78718268918797496 1.2986618696149337</Translation>
+</Transform>
+</Instance>
+<Instance name="ServoArm-1" uid="ServoArm-1" entityUid="ServoArm*:*Default">
+<Transform>
+<Rotation>4.7991124962898412e-14 0.99999999999999967 0 -0.99999999999999989 4.7987655515946358e-14 0 0 0 1</Rotation>
+<Translation>0.68606456603129717 0.88718268918797483 1.3021543696149334</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="MotorRotor_a-1" uid="MotorRotor_a-1" entityUid="MotorRotor_a" rigid="true">
+<Transform>
+<Rotation>-1.3974932322469158e-14 3.5004551340866996e-15 1 4.8284293230338449e-14 -1 3.5006177644125724e-15 0.99999999999999989 4.8282558506862472e-14 1.3981871216373065e-14</Rotation>
+<Translation>-1.4446307316149165 0.940182689187952 -0.68606456603136834</Translation>
+</Transform>
+<Instance name="ball-1" uid="ball-1" entityUid="ball*:*6960T431">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130195 0.76019518918797502 1.3285068696149336</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-2" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-2" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>0.88613883141072392 0.46341986520436984 0 -0.46341986520436995 0.88613883141072414 0 0 0 1</Rotation>
+<Translation>0.67307418497453031 0.89468268918797433 1.3081043696149333</Translation>
+</Transform>
+</Instance>
+<Instance name="90790A185_Black-Oxide Steel High-Heavy-Profile Cap Nut-1" uid="90790A185_Black-Oxide Steel High-Heavy-Profile Cap Nut-1" entityUid="90790A185_Black-Oxide Steel High-Heavy-Profile Cap Nut*:*90790A185">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130184 0.78718268918797496 1.2951693696149333</Translation>
+</Transform>
+</Instance>
+<Instance name="93413A312_Black Super-Corrosion-Resistant-Coated Steel Washer-1" uid="93413A312_Black Super-Corrosion-Resistant-Coated Steel Washer-1" entityUid="93413A312_Black Super-Corrosion-Resistant-Coated Steel Washer*:*93413A312">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130195 0.78718268918797507 1.3161243696149332</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-3" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-3" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>0.14120295625654489 0.98998066907612492 0 -0.98998066907612514 0.14120295625654494 0 0 0 1</Rotation>
+<Translation>0.68606456603129784 0.87218268918797504 1.3081043696149333</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A628_Alloy Steel Shoulder Screw-1" uid="91259A628_Alloy Steel Shoulder Screw-1" entityUid="91259A628_Alloy Steel Shoulder Screw*:*91259A628">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130195 0.78718268918797507 1.3396193696149334</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-1" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-1" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.69905494708806348 0.89468268918797544 1.3081043696149333</Translation>
+</Transform>
+</Instance>
+<Instance name="MotorRotor-1" uid="MotorRotor-1" grounded="true" entityUid="MotorRotor*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130028 0.88718268918797216 1.3021543696149334</Translation>
+</Transform>
+</Instance>
+<Instance name="92510A494_Aluminum Unthreaded Spacer-1" uid="92510A494_Aluminum Unthreaded Spacer-1" entityUid="92510A494_Aluminum Unthreaded Spacer*:*92510A494">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130195 0.78718268918797496 1.2986618696149332</Translation>
+</Transform>
+</Instance>
+<Instance name="ServoArm-1" uid="ServoArm-1" entityUid="ServoArm*:*Default">
+<Transform>
+<Rotation>4.7991124962898412e-14 0.99999999999999967 0 -0.99999999999999989 4.7987655515946358e-14 0 0 0 1</Rotation>
+<Translation>0.68606456603129717 0.88718268918797505 1.3021543696149334</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="HeimJoint No Ball-3" uid="HeimJoint No Ball-3" entityUid="HeimJoint No Ball" rigid="true">
+<Transform>
+<Rotation>0.49803764356733554 0.7879177935325582 0.36213817283556338 0.86262650274063646 -0.49279111131578851 -0.11415970119796508 0.088510012763269683 0.36924581411701213 -0.92510729453275353</Rotation>
+<Translation>-1.5529165964796414 -0.23624317547175328 0.61415340549129582</Translation>
+</Transform>
+<Instance name="8422N111_18-8 Stainless Steel Turnbuckle-Style Connecting Rod-1" uid="8422N111_18-8 Stainless Steel Turnbuckle-Style Connecting Rod-1" grounded="true" entityUid="8422N111_18-8 Stainless Steel Turnbuckle-Style Connecting Rod*:*8422N111">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>1.0384677785390275 1.0186462104320524 0.99041922914329872</Translation>
+</Transform>
+</Instance>
+<Instance name="6960T431_Super-Swivel Ball Joint Rod End No Ball-1" uid="6960T431_Super-Swivel Ball Joint Rod End No Ball-1" entityUid="6960T431_Super-Swivel Ball Joint Rod End No Ball*:*6960T431">
+<Transform>
+<Rotation>0 0 -1 -1 1.6653345369377338e-16 0 1.6653345369377348e-16 1 0</Rotation>
+<Translation>1.0384677785390275 1.0186462104320524 1.1499654791432987</Translation>
+</Transform>
+</Instance>
+<Instance name="6960T432_Super-Swivel Ball Joint Rod End No Ball-1" uid="6960T432_Super-Swivel Ball Joint Rod End No Ball-1" entityUid="6960T432_Super-Swivel Ball Joint Rod End No Ball*:*6960T432">
+<Transform>
+<Rotation>1.1102230246251565e-16 0 1 -1 -2.7755575615628904e-16 1.1102230246251568e-16 2.7755575615628914e-16 -1 0</Rotation>
+<Translation>1.0384677785390275 1.0186462104320524 0.83087297914329883</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="Platform_a-1" uid="Platform_a-1" entityUid="Platform_a" rigid="true">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>-2.8211728246670116e-05 1.9284145978282144e-14 0.3636282451324675</Translation>
+</Transform>
+<Instance name="Platform-1" uid="Platform-1" entityUid="Platform*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="U_channel_a-2" uid="U_channel_a-2" entityUid="U_channel_a" rigid="true">
+<Transform>
+<Rotation>0.86589350392075515 0.49999999999999806 0.015114227331850002 -0.49992384757819375 0.86602540378443971 -0.0087262032186367511 -0.017452406437273575 0 0.99984769515639138</Rotation>
+<Translation>-1.3693186369958226 -0.25171309203045666 -1.0209024434502589</Translation>
+</Transform>
+<Instance name="92510A494_Aluminum Unthreaded Spacer-2" uid="92510A494_Aluminum Unthreaded Spacer-2" entityUid="92510A494_Aluminum Unthreaded Spacer*:*92510A494">
+<Transform>
+<Rotation>0.99999999999999978 0 0 0 2.0990154059319366e-16 -1 0 1 2.0643037241929272e-16</Rotation>
+<Translation>1.0625800444363434 1.0038567910398581 1.0078822776105656</Translation>
+</Transform>
+</Instance>
+<Instance name="ball-1" uid="ball-1" entityUid="ball*:*6960T431">
+<Transform>
+<Rotation>0.99999999999999978 0 0 0 2.0990154059319366e-16 -1 0 1 2.0643037241929272e-16</Rotation>
+<Translation>1.0625800444363436 0.98925179103985794 0.98089477761056565</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A484_Alloy Steel Shoulder Screw-1" uid="91259A484_Alloy Steel Shoulder Screw-1" entityUid="91259A484_Alloy Steel Shoulder Screw*:*91259A484">
+<Transform>
+<Rotation>1 0 0 0 -2.0903417885520525e-16 1 0 -1 -2.0903417885520525e-16</Rotation>
+<Translation>1.0625800444363434 0.98607679103985846 1.0078822776105656</Translation>
+</Transform>
+</Instance>
+<Instance name="90098A115_Extra-Wide Thin Nylon-Insert Locknut-1" uid="90098A115_Extra-Wide Thin Nylon-Insert Locknut-1" entityUid="90098A115_Extra-Wide Thin Nylon-Insert Locknut*:*90098A115">
+<Transform>
+<Rotation>0.99999999999999978 0 0 0 -1 -2.0036056147532122e-16 0 1.9953359446401899e-16 -0.99999999999999989</Rotation>
+<Translation>1.0625800444363431 0.96464554103985845 1.0078822776105656</Translation>
+</Transform>
+</Instance>
+<Instance name="92510A494_Aluminum Unthreaded Spacer-1" uid="92510A494_Aluminum Unthreaded Spacer-1" entityUid="92510A494_Aluminum Unthreaded Spacer*:*92510A494">
+<Transform>
+<Rotation>0.99999999999999978 0 0 0 2.0990154059319366e-16 -1 0 1 2.0643037241929272e-16</Rotation>
+<Translation>1.0625800444363436 0.97464679103985852 1.0078822776105656</Translation>
+</Transform>
+</Instance>
+<Instance name="3310T432_Strut Channel-1" uid="3310T432_Strut Channel-1" entityUid="3310T432_Strut Channel*:*3310T432">
+<Transform>
+<Rotation>-0.017452406437273572 0 -0.99984769515639138 0 1 0 0.99984769515639138 0 -0.017452406437273572</Rotation>
+<Translation>1.0425005275614623 0.98925179103985861 1.0122632589656813</Translation>
+</Transform>
+</Instance>
+<Instance name="92196A319_18-8 Stainless Steel Socket Head Screw-3" uid="92196A319_18-8 Stainless Steel Socket Head Screw-3" entityUid="92196A319_18-8 Stainless Steel Socket Head Screw*:*92196A319">
+<Transform>
+<Rotation>-0.99984769515639138 1.1097512273998725e-16 0.017452406437273575 1.110223024625157e-16 1 0 -0.017452406437273575 0 -0.99984769515639138</Rotation>
+<Translation>1.0673037571407442 0.98066341603985852 1.0466738759128889</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A484_Alloy Steel Shoulder Screw-2" uid="91259A484_Alloy Steel Shoulder Screw-2" entityUid="91259A484_Alloy Steel Shoulder Screw*:*91259A484">
+<Transform>
+<Rotation>1 0 0 0 -2.0903417885520525e-16 1 0 -1 -2.0903417885520525e-16</Rotation>
+<Translation>1.0225861366300879 0.98607679103985868 1.0071841813530746</Translation>
+</Transform>
+</Instance>
+<Instance name="ball-2" uid="ball-2" entityUid="ball*:*6960T431">
+<Transform>
+<Rotation>0.99999999999999978 0 0 0 2.0990154059319366e-16 -1 0 1 2.0643037241929272e-16</Rotation>
+<Translation>1.0225861366300879 0.98925179103985794 0.98019668135307447</Translation>
+</Transform>
+</Instance>
+<Instance name="92510A494_Aluminum Unthreaded Spacer-4" uid="92510A494_Aluminum Unthreaded Spacer-4" entityUid="92510A494_Aluminum Unthreaded Spacer*:*92510A494">
+<Transform>
+<Rotation>0.99999999999999978 0 0 0 2.0990154059319366e-16 -1 0 1 2.0643037241929272e-16</Rotation>
+<Translation>1.0225861366300879 1.0038567910398581 1.0071841813530746</Translation>
+</Transform>
+</Instance>
+<Instance name="90098A115_Extra-Wide Thin Nylon-Insert Locknut-2" uid="90098A115_Extra-Wide Thin Nylon-Insert Locknut-2" entityUid="90098A115_Extra-Wide Thin Nylon-Insert Locknut*:*90098A115">
+<Transform>
+<Rotation>0.99999999999999978 0 0 0 -1 -2.0036056147532122e-16 0 1.9953359446401899e-16 -0.99999999999999989</Rotation>
+<Translation>1.0225861366300879 0.96464554103985867 1.0071841813530746</Translation>
+</Transform>
+</Instance>
+<Instance name="92510A494_Aluminum Unthreaded Spacer-3" uid="92510A494_Aluminum Unthreaded Spacer-3" entityUid="92510A494_Aluminum Unthreaded Spacer*:*92510A494">
+<Transform>
+<Rotation>0.99999999999999978 0 0 0 2.0990154059319366e-16 -1 0 1 2.0643037241929272e-16</Rotation>
+<Translation>1.0225861366300881 0.97464679103985863 1.0071841813530746</Translation>
+</Transform>
+</Instance>
+<Instance name="92196A319_18-8 Stainless Steel Socket Head Screw-1" uid="92196A319_18-8 Stainless Steel Socket Head Screw-1" entityUid="92196A319_18-8 Stainless Steel Socket Head Screw*:*92196A319">
+<Transform>
+<Rotation>-0.99984769515639138 1.1097512273998725e-16 0.017452406437273575 1.110223024625157e-16 1 0 -0.017452406437273575 0 -0.99984769515639138</Rotation>
+<Translation>1.0165114942268001 0.99784016603985859 1.0457872936658752</Translation>
+</Transform>
+</Instance>
+<Instance name="92196A319_18-8 Stainless Steel Socket Head Screw-2" uid="92196A319_18-8 Stainless Steel Socket Head Screw-2" entityUid="92196A319_18-8 Stainless Steel Socket Head Screw*:*92196A319">
+<Transform>
+<Rotation>-0.99984769515639138 1.1097512273998725e-16 0.017452406437273575 1.110223024625157e-16 1 0 -0.017452406437273575 0 -0.99984769515639138</Rotation>
+<Translation>1.0673037571407444 0.99784016603985837 1.0466738759128889</Translation>
+</Transform>
+</Instance>
+<Instance name="92196A319_18-8 Stainless Steel Socket Head Screw-4" uid="92196A319_18-8 Stainless Steel Socket Head Screw-4" entityUid="92196A319_18-8 Stainless Steel Socket Head Screw*:*92196A319">
+<Transform>
+<Rotation>-0.99984769515639138 1.1097512273998725e-16 0.017452406437273575 1.110223024625157e-16 1 0 -0.017452406437273575 0 -0.99984769515639138</Rotation>
+<Translation>1.0165114942267999 0.98066341603985863 1.0457872936658752</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="U_channel_a-1" uid="U_channel_a-1" entityUid="U_channel_a" rigid="true">
+<Transform>
+<Rotation>1.9428902930940239e-15 -1 0 0.99984769515639127 2.1094237467877974e-15 0.017452406437273561 -0.017452406437273561 0 0.99984769515639127</Rotation>
+<Translation>0.90264925066141277 -1.0600081794986416 -1.0209024434502587</Translation>
+</Transform>
+<Instance name="92510A494_Aluminum Unthreaded Spacer-2" uid="92510A494_Aluminum Unthreaded Spacer-2" entityUid="92510A494_Aluminum Unthreaded Spacer*:*92510A494">
+<Transform>
+<Rotation>1 0 1.6268570053881194e-16 1.6268570053881194e-16 2.1153755883568117e-16 -1 0 1 2.1153755883568117e-16</Rotation>
+<Translation>1.0625800444363442 1.0038567910398586 1.0078822776105654</Translation>
+</Transform>
+</Instance>
+<Instance name="ball-1" uid="ball-1" entityUid="ball*:*6960T431">
+<Transform>
+<Rotation>1 0 1.6268570053881194e-16 1.6268570053881194e-16 2.1153755883568117e-16 -1 0 1 2.1153755883568117e-16</Rotation>
+<Translation>1.0625800444363438 0.98925179103985827 0.98089477761056543</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A484_Alloy Steel Shoulder Screw-1" uid="91259A484_Alloy Steel Shoulder Screw-1" entityUid="91259A484_Alloy Steel Shoulder Screw*:*91259A484">
+<Transform>
+<Rotation>1 0 -1.6268570053881191e-16 1.6268570053881194e-16 -2.1153755883568114e-16 0.99999999999999989 0 -0.99999999999999989 -2.1153755883568114e-16</Rotation>
+<Translation>1.0625800444363438 0.9860767910398589 1.0078822776105654</Translation>
+</Transform>
+</Instance>
+<Instance name="90098A115_Extra-Wide Thin Nylon-Insert Locknut-1" uid="90098A115_Extra-Wide Thin Nylon-Insert Locknut-1" entityUid="90098A115_Extra-Wide Thin Nylon-Insert Locknut*:*90098A115">
+<Transform>
+<Rotation>1 1.6268570053881191e-16 0 1.6268570053881194e-16 -1 -1.9785718149484516e-16 0 1.9785718149484516e-16 -1</Rotation>
+<Translation>1.0625800444363438 0.96464554103985889 1.0078822776105654</Translation>
+</Transform>
+</Instance>
+<Instance name="92510A494_Aluminum Unthreaded Spacer-1" uid="92510A494_Aluminum Unthreaded Spacer-1" entityUid="92510A494_Aluminum Unthreaded Spacer*:*92510A494">
+<Transform>
+<Rotation>1 0 1.6268570053881194e-16 1.6268570053881194e-16 2.1153755883568117e-16 -1 0 1 2.1153755883568117e-16</Rotation>
+<Translation>1.062580044436344 0.97464679103985885 1.0078822776105654</Translation>
+</Transform>
+</Instance>
+<Instance name="3310T432_Strut Channel-1" uid="3310T432_Strut Channel-1" entityUid="3310T432_Strut Channel*:*3310T432">
+<Transform>
+<Rotation>-0.017452406437273572 1.6623700713874597e-16 -0.99984769515639138 0 1 1.6625413841199002e-16 0.99984769515639138 0 -0.017452406437273572</Rotation>
+<Translation>1.0425005275614627 0.98925179103985894 1.0122632589656808</Translation>
+</Transform>
+</Instance>
+<Instance name="92196A319_18-8 Stainless Steel Socket Head Screw-3" uid="92196A319_18-8 Stainless Steel Socket Head Screw-3" entityUid="92196A319_18-8 Stainless Steel Socket Head Screw*:*92196A319">
+<Transform>
+<Rotation>-0.99984769515639138 -1.6623700713874567e-16 0.017452406437273575 -1.6625413841198982e-16 1 0 -0.017452406437273575 0 -0.99984769515639138</Rotation>
+<Translation>1.0673037571407447 0.98066341603985885 1.0466738759128886</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A484_Alloy Steel Shoulder Screw-2" uid="91259A484_Alloy Steel Shoulder Screw-2" entityUid="91259A484_Alloy Steel Shoulder Screw*:*91259A484">
+<Transform>
+<Rotation>1 0 -1.6268570053881191e-16 1.6268570053881194e-16 -2.1153755883568114e-16 0.99999999999999989 0 -0.99999999999999989 -2.1153755883568114e-16</Rotation>
+<Translation>1.0225861366300883 0.98607679103985901 1.0071841813530744</Translation>
+</Transform>
+</Instance>
+<Instance name="ball-2" uid="ball-2" entityUid="ball*:*6960T431">
+<Transform>
+<Rotation>1 0 1.6268570053881194e-16 1.6268570053881194e-16 2.1153755883568117e-16 -1 0 1 2.1153755883568117e-16</Rotation>
+<Translation>1.0225861366300883 0.98925179103985839 0.98019668135307425</Translation>
+</Transform>
+</Instance>
+<Instance name="92510A494_Aluminum Unthreaded Spacer-4" uid="92510A494_Aluminum Unthreaded Spacer-4" entityUid="92510A494_Aluminum Unthreaded Spacer*:*92510A494">
+<Transform>
+<Rotation>1 0 1.6268570053881194e-16 1.6268570053881194e-16 2.1153755883568117e-16 -1 0 1 2.1153755883568117e-16</Rotation>
+<Translation>1.0225861366300886 1.0038567910398586 1.0071841813530744</Translation>
+</Transform>
+</Instance>
+<Instance name="90098A115_Extra-Wide Thin Nylon-Insert Locknut-2" uid="90098A115_Extra-Wide Thin Nylon-Insert Locknut-2" entityUid="90098A115_Extra-Wide Thin Nylon-Insert Locknut*:*90098A115">
+<Transform>
+<Rotation>1 1.6268570053881191e-16 0 1.6268570053881194e-16 -1 -1.9785718149484516e-16 0 1.9785718149484516e-16 -1</Rotation>
+<Translation>1.0225861366300883 0.964645541039859 1.0071841813530744</Translation>
+</Transform>
+</Instance>
+<Instance name="92510A494_Aluminum Unthreaded Spacer-3" uid="92510A494_Aluminum Unthreaded Spacer-3" entityUid="92510A494_Aluminum Unthreaded Spacer*:*92510A494">
+<Transform>
+<Rotation>1 0 1.6268570053881194e-16 1.6268570053881194e-16 2.1153755883568117e-16 -1 0 1 2.1153755883568117e-16</Rotation>
+<Translation>1.0225861366300886 0.97464679103985896 1.0071841813530744</Translation>
+</Transform>
+</Instance>
+<Instance name="92196A319_18-8 Stainless Steel Socket Head Screw-1" uid="92196A319_18-8 Stainless Steel Socket Head Screw-1" entityUid="92196A319_18-8 Stainless Steel Socket Head Screw*:*92196A319">
+<Transform>
+<Rotation>-0.99984769515639138 -1.6623700713874567e-16 0.017452406437273575 -1.6625413841198982e-16 1 0 -0.017452406437273575 0 -0.99984769515639138</Rotation>
+<Translation>1.0165114942268003 0.99784016603985881 1.0457872936658748</Translation>
+</Transform>
+</Instance>
+<Instance name="92196A319_18-8 Stainless Steel Socket Head Screw-2" uid="92196A319_18-8 Stainless Steel Socket Head Screw-2" entityUid="92196A319_18-8 Stainless Steel Socket Head Screw*:*92196A319">
+<Transform>
+<Rotation>-0.99984769515639138 -1.6623700713874567e-16 0.017452406437273575 -1.6625413841198982e-16 1 0 -0.017452406437273575 0 -0.99984769515639138</Rotation>
+<Translation>1.0673037571407449 0.99784016603985881 1.0466738759128886</Translation>
+</Transform>
+</Instance>
+<Instance name="92196A319_18-8 Stainless Steel Socket Head Screw-4" uid="92196A319_18-8 Stainless Steel Socket Head Screw-4" entityUid="92196A319_18-8 Stainless Steel Socket Head Screw*:*92196A319">
+<Transform>
+<Rotation>-0.99984769515639138 -1.6623700713874567e-16 0.017452406437273575 -1.6625413841198982e-16 1 0 -0.017452406437273575 0 -0.99984769515639138</Rotation>
+<Translation>1.0165114942268001 0.98066341603985885 1.0457872936658748</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="U_channel_a-3" uid="U_channel_a-3" entityUid="U_channel_a" rigid="true">
+<Transform>
+<Rotation>-0.86589350392075959 0.49999999999999101 -0.015114227331850052 -0.49992384757818681 -0.86602540378444381 -0.0087262032186366176 -0.017452406437273544 0 0.99984769515639138</Rotation>
+<Translation>0.46666938633442234 1.3117212715290874 -1.0209024434502592</Translation>
+</Transform>
+<Instance name="92510A494_Aluminum Unthreaded Spacer-2" uid="92510A494_Aluminum Unthreaded Spacer-2" entityUid="92510A494_Aluminum Unthreaded Spacer*:*92510A494">
+<Transform>
+<Rotation>1 0 0 0 2.1082966027863847e-16 -1 0 1 2.1082966027863847e-16</Rotation>
+<Translation>1.0625800444363445 1.0038567910398584 1.0078822776105656</Translation>
+</Transform>
+</Instance>
+<Instance name="ball-1" uid="ball-1" entityUid="ball*:*6960T431">
+<Transform>
+<Rotation>1 0 0 0 2.1082966027863847e-16 -1 0 1 2.1082966027863847e-16</Rotation>
+<Translation>1.0625800444363445 0.98925179103985816 0.98089477761056565</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A484_Alloy Steel Shoulder Screw-1" uid="91259A484_Alloy Steel Shoulder Screw-1" entityUid="91259A484_Alloy Steel Shoulder Screw*:*91259A484">
+<Transform>
+<Rotation>1.0000000000000002 0 -1.0740442811301191e-16 0 -2.0909493680266166e-16 0.99999999999999989 0 -1 -2.0813524440608517e-16</Rotation>
+<Translation>1.0625800444363442 0.98607679103985868 1.0078822776105656</Translation>
+</Transform>
+</Instance>
+<Instance name="90098A115_Extra-Wide Thin Nylon-Insert Locknut-1" uid="90098A115_Extra-Wide Thin Nylon-Insert Locknut-1" entityUid="90098A115_Extra-Wide Thin Nylon-Insert Locknut*:*90098A115">
+<Transform>
+<Rotation>1.0000000000000002 0 0 0 -1 -2.0302340463674284e-16 0 1.9937208951426333e-16 -1</Rotation>
+<Translation>1.0625800444363442 0.96464554103985889 1.0078822776105656</Translation>
+</Transform>
+</Instance>
+<Instance name="92510A494_Aluminum Unthreaded Spacer-1" uid="92510A494_Aluminum Unthreaded Spacer-1" entityUid="92510A494_Aluminum Unthreaded Spacer*:*92510A494">
+<Transform>
+<Rotation>1 0 0 0 2.1082966027863847e-16 -1 0 1 2.1082966027863847e-16</Rotation>
+<Translation>1.0625800444363445 0.97464679103985863 1.0078822776105656</Translation>
+</Transform>
+</Instance>
+<Instance name="3310T432_Strut Channel-1" uid="3310T432_Strut Channel-1" entityUid="3310T432_Strut Channel*:*3310T432">
+<Transform>
+<Rotation>-0.017452406437273572 0 -0.99984769515639171 0 1 0 0.99984769515639138 0 -0.017452406437273579</Rotation>
+<Translation>1.0425005275614634 0.98925179103985872 1.0122632589656813</Translation>
+</Transform>
+</Instance>
+<Instance name="92196A319_18-8 Stainless Steel Socket Head Screw-3" uid="92196A319_18-8 Stainless Steel Socket Head Screw-3" entityUid="92196A319_18-8 Stainless Steel Socket Head Screw*:*92196A319">
+<Transform>
+<Rotation>-0.99984769515639171 0 0.017452406437273575 0 1 0 -0.017452406437273582 0 -0.99984769515639138</Rotation>
+<Translation>1.0673037571407453 0.98066341603985874 1.0466738759128889</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A484_Alloy Steel Shoulder Screw-2" uid="91259A484_Alloy Steel Shoulder Screw-2" entityUid="91259A484_Alloy Steel Shoulder Screw*:*91259A484">
+<Transform>
+<Rotation>1.0000000000000002 0 -1.0740442811301191e-16 0 -2.0909493680266166e-16 0.99999999999999989 0 -1 -2.0813524440608517e-16</Rotation>
+<Translation>1.0225861366300888 0.98607679103985868 1.0071841813530746</Translation>
+</Transform>
+</Instance>
+<Instance name="ball-2" uid="ball-2" entityUid="ball*:*6960T431">
+<Transform>
+<Rotation>1 0 0 0 2.1082966027863847e-16 -1 0 1 2.1082966027863847e-16</Rotation>
+<Translation>1.0225861366300888 0.98925179103985816 0.98019668135307447</Translation>
+</Transform>
+</Instance>
+<Instance name="92510A494_Aluminum Unthreaded Spacer-4" uid="92510A494_Aluminum Unthreaded Spacer-4" entityUid="92510A494_Aluminum Unthreaded Spacer*:*92510A494">
+<Transform>
+<Rotation>1 0 0 0 2.1082966027863847e-16 -1 0 1 2.1082966027863847e-16</Rotation>
+<Translation>1.0225861366300888 1.0038567910398584 1.0071841813530746</Translation>
+</Transform>
+</Instance>
+<Instance name="90098A115_Extra-Wide Thin Nylon-Insert Locknut-2" uid="90098A115_Extra-Wide Thin Nylon-Insert Locknut-2" entityUid="90098A115_Extra-Wide Thin Nylon-Insert Locknut*:*90098A115">
+<Transform>
+<Rotation>1.0000000000000002 0 0 0 -1 -2.0302340463674284e-16 0 1.9937208951426333e-16 -1</Rotation>
+<Translation>1.0225861366300888 0.96464554103985878 1.0071841813530746</Translation>
+</Transform>
+</Instance>
+<Instance name="92510A494_Aluminum Unthreaded Spacer-3" uid="92510A494_Aluminum Unthreaded Spacer-3" entityUid="92510A494_Aluminum Unthreaded Spacer*:*92510A494">
+<Transform>
+<Rotation>1 0 0 0 2.1082966027863847e-16 -1 0 1 2.1082966027863847e-16</Rotation>
+<Translation>1.0225861366300888 0.97464679103985863 1.0071841813530746</Translation>
+</Transform>
+</Instance>
+<Instance name="92196A319_18-8 Stainless Steel Socket Head Screw-1" uid="92196A319_18-8 Stainless Steel Socket Head Screw-1" entityUid="92196A319_18-8 Stainless Steel Socket Head Screw*:*92196A319">
+<Transform>
+<Rotation>-0.99984769515639171 0 0.017452406437273575 0 1 0 -0.017452406437273582 0 -0.99984769515639138</Rotation>
+<Translation>1.016511494226801 0.99784016603985859 1.0457872936658752</Translation>
+</Transform>
+</Instance>
+<Instance name="92196A319_18-8 Stainless Steel Socket Head Screw-2" uid="92196A319_18-8 Stainless Steel Socket Head Screw-2" entityUid="92196A319_18-8 Stainless Steel Socket Head Screw*:*92196A319">
+<Transform>
+<Rotation>-0.99984769515639171 0 0.017452406437273575 0 1 0 -0.017452406437273582 0 -0.99984769515639138</Rotation>
+<Translation>1.0673037571407455 0.99784016603985881 1.0466738759128889</Translation>
+</Transform>
+</Instance>
+<Instance name="92196A319_18-8 Stainless Steel Socket Head Screw-4" uid="92196A319_18-8 Stainless Steel Socket Head Screw-4" entityUid="92196A319_18-8 Stainless Steel Socket Head Screw*:*92196A319">
+<Transform>
+<Rotation>-0.99984769515639171 0 0.017452406437273575 0 1 0 -0.017452406437273582 0 -0.99984769515639138</Rotation>
+<Translation>1.0165114942268005 0.98066341603985863 1.0457872936658752</Translation>
+</Transform>
+</Instance>
+</Instance>
+</Instance>
+<Instance name="HeimJoint No Ball-1" uid="HeimJoint No Ball-1" entityUid="HeimJoint No Ball" rigid="true">
+<Transform>
+<Rotation>-0.99607528713478632 0.032810724392354204 -0.082203885091896634 -6.9868562975125559e-14 0.92875238095086521 0.37070070795467758 0.088510012763261939 0.36924581411702989 -0.92510729453274709</Rotation>
+<Translation>0.98100857207663128 -1.2267192027005935 0.61415340549126007</Translation>
+</Transform>
+<Instance name="8422N111_18-8 Stainless Steel Turnbuckle-Style Connecting Rod-1" uid="8422N111_18-8 Stainless Steel Turnbuckle-Style Connecting Rod-1" grounded="true" entityUid="8422N111_18-8 Stainless Steel Turnbuckle-Style Connecting Rod*:*8422N111">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>1.0384677785390277 1.0186462104320526 0.99041922914329872</Translation>
+</Transform>
+</Instance>
+<Instance name="6960T431_Super-Swivel Ball Joint Rod End No Ball-1" uid="6960T431_Super-Swivel Ball Joint Rod End No Ball-1" entityUid="6960T431_Super-Swivel Ball Joint Rod End No Ball*:*6960T431">
+<Transform>
+<Rotation>0 -1.5265566588595905e-16 -1 -1 0 0 0 1 -1.5265566588595905e-16</Rotation>
+<Translation>1.0384677785390277 1.0186462104320528 1.1499654791432987</Translation>
+</Transform>
+</Instance>
+<Instance name="6960T432_Super-Swivel Ball Joint Rod End No Ball-1" uid="6960T432_Super-Swivel Ball Joint Rod End No Ball-1" entityUid="6960T432_Super-Swivel Ball Joint Rod End No Ball*:*6960T432">
+<Transform>
+<Rotation>1.9428902930940239e-16 1.5265566588595905e-16 1 -1 0 1.9428902930940239e-16 0 -1 1.5265566588595905e-16</Rotation>
+<Translation>1.0384677785390277 1.0186462104320526 0.83087297914329883</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="HeimJoint No Ball-4" uid="HeimJoint No Ball-4" entityUid="HeimJoint No Ball" rigid="true">
+<Transform>
+<Rotation>0.49803764356733565 0.82072851792494306 -0.27993428774378826 0.86262650274063646 -0.43596126963494519 0.25654100675670799 0.088510012763269891 -0.36924581411711788 -0.92510729453271123</Rotation>
+<Translation>-1.1002405999370308 -0.57478178775473232 1.3664151040277506</Translation>
+</Transform>
+<Instance name="8422N111_18-8 Stainless Steel Turnbuckle-Style Connecting Rod-1" uid="8422N111_18-8 Stainless Steel Turnbuckle-Style Connecting Rod-1" grounded="true" entityUid="8422N111_18-8 Stainless Steel Turnbuckle-Style Connecting Rod*:*8422N111">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>1.0384677785390275 1.0186462104320528 0.99041922914329894</Translation>
+</Transform>
+</Instance>
+<Instance name="6960T431_Super-Swivel Ball Joint Rod End No Ball-1" uid="6960T431_Super-Swivel Ball Joint Rod End No Ball-1" entityUid="6960T431_Super-Swivel Ball Joint Rod End No Ball*:*6960T431">
+<Transform>
+<Rotation>0 -1.8041124150158799e-16 -1 -1 0 0 0 1 -1.8041124150158799e-16</Rotation>
+<Translation>1.0384677785390277 1.0186462104320528 1.1499654791432992</Translation>
+</Transform>
+</Instance>
+<Instance name="6960T432_Super-Swivel Ball Joint Rod End No Ball-1" uid="6960T432_Super-Swivel Ball Joint Rod End No Ball-1" entityUid="6960T432_Super-Swivel Ball Joint Rod End No Ball*:*6960T432">
+<Transform>
+<Rotation>0 1.2490009027033016e-16 1 -1 -1.6653345369377343e-16 0 1.6653345369377343e-16 -1 1.2490009027033014e-16</Rotation>
+<Translation>1.0384677785390277 1.0186462104320528 0.83087297914329916</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="HeimJoint No Ball-5" uid="HeimJoint No Ball-5" entityUid="HeimJoint No Ball" rigid="true">
+<Transform>
+<Rotation>0.49803764356745522 -0.82072851792490698 -0.27993428774368112 -0.86262650274056907 -0.43596126963508858 -0.25654100675669067 0.088510012763252807 0.36924581411702873 -0.92510729453274854</Rotation>
+<Translation>0.57182338921815856 1.4629623781723273 0.61415340549127662</Translation>
+</Transform>
+<Instance name="8422N111_18-8 Stainless Steel Turnbuckle-Style Connecting Rod-1" uid="8422N111_18-8 Stainless Steel Turnbuckle-Style Connecting Rod-1" grounded="true" entityUid="8422N111_18-8 Stainless Steel Turnbuckle-Style Connecting Rod*:*8422N111">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>1.0384677785390277 1.0186462104320526 0.99041922914329916</Translation>
+</Transform>
+</Instance>
+<Instance name="6960T431_Super-Swivel Ball Joint Rod End No Ball-1" uid="6960T431_Super-Swivel Ball Joint Rod End No Ball-1" entityUid="6960T431_Super-Swivel Ball Joint Rod End No Ball*:*6960T431">
+<Transform>
+<Rotation>0 0 -1 -1 0 0 0 1 0</Rotation>
+<Translation>1.0384677785390277 1.0186462104320526 1.1499654791432992</Translation>
+</Transform>
+</Instance>
+<Instance name="6960T432_Super-Swivel Ball Joint Rod End No Ball-1" uid="6960T432_Super-Swivel Ball Joint Rod End No Ball-1" entityUid="6960T432_Super-Swivel Ball Joint Rod End No Ball*:*6960T432">
+<Transform>
+<Rotation>1.0408340855860843e-16 0 0.99999999999999967 -1 0 0 1.6653345369377348e-16 -1 0</Rotation>
+<Translation>1.0384677785390277 1.0186462104320526 0.83087297914329927</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="MotorRotor_a-4" uid="MotorRotor_a-4" entityUid="MotorRotor_a" rigid="true">
+<Transform>
+<Rotation>-4.8787363038371723e-14 0.86602540378443993 -0.49999999999999761 1.142575617452124e-14 -0.49999999999999767 -0.86602540378443982 -0.99999999999999989 -4.7954695769902855e-14 1.4488410471358293e-14</Rotation>
+<Translation>-0.091949044820068743 1.7211538251868075 0.68606456603130828</Translation>
+</Transform>
+<Instance name="ball-1" uid="ball-1" entityUid="ball*:*6960T431">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130195 0.76019518918797513 1.3285068696149331</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-2" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-2" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>0.88613883141072392 0.46341986520437001 0 -0.46341986520436995 0.88613883141072392 0 0 0 0.99999999999999989</Rotation>
+<Translation>0.6730741849745302 0.89468268918797411 1.3081043696149328</Translation>
+</Transform>
+</Instance>
+<Instance name="90790A185_Black-Oxide Steel High-Heavy-Profile Cap Nut-1" uid="90790A185_Black-Oxide Steel High-Heavy-Profile Cap Nut-1" entityUid="90790A185_Black-Oxide Steel High-Heavy-Profile Cap Nut*:*90790A185">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130195 0.78718268918797485 1.2951693696149331</Translation>
+</Transform>
+</Instance>
+<Instance name="93413A312_Black Super-Corrosion-Resistant-Coated Steel Washer-1" uid="93413A312_Black Super-Corrosion-Resistant-Coated Steel Washer-1" entityUid="93413A312_Black Super-Corrosion-Resistant-Coated Steel Washer*:*93413A312">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130184 0.78718268918797485 1.316124369614933</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-3" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-3" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>0.14120295625654491 0.98998066907612514 0 -0.98998066907612503 0.14120295625654491 0 0 0 1</Rotation>
+<Translation>0.68606456603129784 0.87218268918797481 1.3081043696149326</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A628_Alloy Steel Shoulder Screw-1" uid="91259A628_Alloy Steel Shoulder Screw-1" entityUid="91259A628_Alloy Steel Shoulder Screw*:*91259A628">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130184 0.78718268918797496 1.3396193696149332</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-1" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-1" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.69905494708806337 0.89468268918797522 1.3081043696149326</Translation>
+</Transform>
+</Instance>
+<Instance name="MotorRotor-1" uid="MotorRotor-1" grounded="true" entityUid="MotorRotor*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130017 0.88718268918797205 1.3021543696149329</Translation>
+</Transform>
+</Instance>
+<Instance name="92510A494_Aluminum Unthreaded Spacer-1" uid="92510A494_Aluminum Unthreaded Spacer-1" entityUid="92510A494_Aluminum Unthreaded Spacer*:*92510A494">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130195 0.78718268918797496 1.298661869614933</Translation>
+</Transform>
+</Instance>
+<Instance name="ServoArm-1" uid="ServoArm-1" entityUid="ServoArm*:*Default">
+<Transform>
+<Rotation>4.7998668331664069e-14 0.99999999999999989 0 -1 4.7989390239422391e-14 0 0 0 0.99999999999999989</Rotation>
+<Translation>0.68606456603129706 0.88718268918797494 1.3021543696149331</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="MotorRotor_a-5" uid="MotorRotor_a-5" entityUid="MotorRotor_a" rigid="true">
+<Transform>
+<Rotation>-2.9719282590434659e-14 0.86602540378443693 -0.50000000000000278 -3.1823502166794526e-14 0.50000000000000289 0.86602540378443682 0.99999999999999989 4.1649404788962325e-14 1.2700320018615718e-14</Rotation>
+<Translation>-0.091949044820114872 -1.7211538251868204 -0.68606456603134036</Translation>
+</Transform>
+<Instance name="ball-1" uid="ball-1" entityUid="ball*:*6960T431">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130195 0.76019518918797502 1.3285068696149334</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-2" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-2" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>0.88613883141072392 0.46341986520437001 0 -0.4634198652043699 0.88613883141072403 0 0 0 1</Rotation>
+<Translation>0.67307418497453042 0.89468268918797422 1.3081043696149328</Translation>
+</Transform>
+</Instance>
+<Instance name="90790A185_Black-Oxide Steel High-Heavy-Profile Cap Nut-1" uid="90790A185_Black-Oxide Steel High-Heavy-Profile Cap Nut-1" entityUid="90790A185_Black-Oxide Steel High-Heavy-Profile Cap Nut*:*90790A185">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130184 0.78718268918797496 1.2951693696149331</Translation>
+</Transform>
+</Instance>
+<Instance name="93413A312_Black Super-Corrosion-Resistant-Coated Steel Washer-1" uid="93413A312_Black Super-Corrosion-Resistant-Coated Steel Washer-1" entityUid="93413A312_Black Super-Corrosion-Resistant-Coated Steel Washer*:*93413A312">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130195 0.78718268918797485 1.316124369614933</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-3" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-3" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>0.14120295625654491 0.98998066907612514 0 -0.98998066907612514 0.14120295625654491 0 0 0 1</Rotation>
+<Translation>0.68606456603129784 0.87218268918797492 1.308104369614933</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A628_Alloy Steel Shoulder Screw-1" uid="91259A628_Alloy Steel Shoulder Screw-1" entityUid="91259A628_Alloy Steel Shoulder Screw*:*91259A628">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130184 0.78718268918797507 1.3396193696149334</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-1" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-1" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.69905494708806359 0.89468268918797533 1.3081043696149328</Translation>
+</Transform>
+</Instance>
+<Instance name="MotorRotor-1" uid="MotorRotor-1" grounded="true" entityUid="MotorRotor*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130028 0.88718268918797194 1.3021543696149329</Translation>
+</Transform>
+</Instance>
+<Instance name="92510A494_Aluminum Unthreaded Spacer-1" uid="92510A494_Aluminum Unthreaded Spacer-1" entityUid="92510A494_Aluminum Unthreaded Spacer*:*92510A494">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130195 0.78718268918797496 1.298661869614933</Translation>
+</Transform>
+</Instance>
+<Instance name="ServoArm-1" uid="ServoArm-1" entityUid="ServoArm*:*Default">
+<Transform>
+<Rotation>4.7989390239422385e-14 0.99999999999999989 0 -1 4.7989390239422391e-14 0 0 0 0.99999999999999978</Rotation>
+<Translation>0.68606456603129717 0.88718268918797483 1.3021543696149331</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="HeimJoint No Ball-2" uid="HeimJoint No Ball-2" entityUid="HeimJoint No Ball" rigid="true">
+<Transform>
+<Rotation>-0.99607528713478644 -0.032810724392490637 -0.082203885091842288 -6.9704225030831068e-14 0.9287523809508319 -0.37070070795476084 0.088510012763261911 -0.36924581411710122 -0.92510729453271889</Rotation>
+<Translation>1.0478536122043109 -0.66542098386977777 1.3664151040277279</Translation>
+</Transform>
+<Instance name="8422N111_18-8 Stainless Steel Turnbuckle-Style Connecting Rod-1" uid="8422N111_18-8 Stainless Steel Turnbuckle-Style Connecting Rod-1" grounded="true" entityUid="8422N111_18-8 Stainless Steel Turnbuckle-Style Connecting Rod*:*8422N111">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>1.0384677785390282 1.0186462104320528 0.99041922914329961</Translation>
+</Transform>
+</Instance>
+<Instance name="6960T431_Super-Swivel Ball Joint Rod End No Ball-1" uid="6960T431_Super-Swivel Ball Joint Rod End No Ball-1" entityUid="6960T431_Super-Swivel Ball Joint Rod End No Ball*:*6960T431">
+<Transform>
+<Rotation>0 0 -1 -1 -1.110223024625157e-16 0 -1.1102230246251565e-16 1 0</Rotation>
+<Translation>1.0384677785390279 1.0186462104320528 1.1499654791432996</Translation>
+</Transform>
+</Instance>
+<Instance name="6960T432_Super-Swivel Ball Joint Rod End No Ball-1" uid="6960T432_Super-Swivel Ball Joint Rod End No Ball-1" entityUid="6960T432_Super-Swivel Ball Joint Rod End No Ball*:*6960T432">
+<Transform>
+<Rotation>0 0 1 -1 0 0 0 -1 0</Rotation>
+<Translation>1.0384677785390279 1.0186462104320528 0.83087297914329961</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="MotorRotor_a-6" uid="MotorRotor_a-6" entityUid="MotorRotor_a" rigid="true">
+<Transform>
+<Rotation>2.9698465908722937e-14 -0.86602540378443704 -0.50000000000000289 3.1773195185991199e-14 -0.50000000000000311 0.86602540378443671 -1 -4.1640302317347277e-14 1.2649603586822877e-14</Rotation>
+<Translation>1.5364951412501417 -0.78097113599888912 0.68606456603132959</Translation>
+</Transform>
+<Instance name="ball-1" uid="ball-1" entityUid="ball*:*6960T431">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130217 0.76019518918797502 1.3285068696149327</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-2" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-2" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>0.88613883141072403 0.46341986520437006 0 -0.46341986520436995 0.88613883141072414 0 0 0 0.99999999999999978</Rotation>
+<Translation>0.67307418497453053 0.89468268918797456 1.3081043696149326</Translation>
+</Transform>
+</Instance>
+<Instance name="90790A185_Black-Oxide Steel High-Heavy-Profile Cap Nut-1" uid="90790A185_Black-Oxide Steel High-Heavy-Profile Cap Nut-1" entityUid="90790A185_Black-Oxide Steel High-Heavy-Profile Cap Nut*:*90790A185">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130206 0.78718268918797518 1.2951693696149329</Translation>
+</Transform>
+</Instance>
+<Instance name="93413A312_Black Super-Corrosion-Resistant-Coated Steel Washer-1" uid="93413A312_Black Super-Corrosion-Resistant-Coated Steel Washer-1" entityUid="93413A312_Black Super-Corrosion-Resistant-Coated Steel Washer*:*93413A312">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130217 0.78718268918797507 1.3161243696149327</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-3" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-3" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>0.14120295625654489 0.98998066907612503 0 -0.98998066907612514 0.14120295625654491 0 0 0 0.99999999999999978</Rotation>
+<Translation>0.68606456603129806 0.87218268918797492 1.3081043696149324</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A628_Alloy Steel Shoulder Screw-1" uid="91259A628_Alloy Steel Shoulder Screw-1" entityUid="91259A628_Alloy Steel Shoulder Screw*:*91259A628">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130206 0.78718268918797507 1.339619369614933</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-1" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-1" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.69905494708806371 0.89468268918797567 1.3081043696149326</Translation>
+</Transform>
+</Instance>
+<Instance name="MotorRotor-1" uid="MotorRotor-1" grounded="true" entityUid="MotorRotor*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130062 0.88718268918797227 1.3021543696149325</Translation>
+</Transform>
+</Instance>
+<Instance name="92510A494_Aluminum Unthreaded Spacer-1" uid="92510A494_Aluminum Unthreaded Spacer-1" entityUid="92510A494_Aluminum Unthreaded Spacer*:*92510A494">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130217 0.78718268918797518 1.298661869614933</Translation>
+</Transform>
+</Instance>
+<Instance name="ServoArm-1" uid="ServoArm-1" entityUid="ServoArm*:*Default">
+<Transform>
+<Rotation>4.7955311445450918e-14 0.99999999999999989 0 -1 4.7955311445450912e-14 0 0 0 0.99999999999999989</Rotation>
+<Translation>0.68606456603129751 0.88718268918797516 1.3021543696149325</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="MotorRotor_a-3" uid="MotorRotor_a-3" entityUid="MotorRotor_a" rigid="true">
+<Transform>
+<Rotation>4.879430193227563e-14 -0.86602540378443982 -0.49999999999999767 -1.1411878386713425e-14 0.49999999999999778 -0.86602540378443982 0.99999999999999989 4.7954695769902855e-14 1.4516166046973922e-14</Rotation>
+<Translation>1.5364951412501668 0.78097113599885837 -0.68606456603137334</Translation>
+</Transform>
+<Instance name="ball-1" uid="ball-1" entityUid="ball*:*6960T431">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130195 0.76019518918797457 1.3285068696149334</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-2" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-2" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>0.88613883141072392 0.4634198652043699 0 -0.46341986520436984 0.88613883141072403 1.0797404089141538e-16 0 -1.0079188867118931e-16 0.99999999999999989</Rotation>
+<Translation>0.67307418497453031 0.89468268918797411 1.3081043696149328</Translation>
+</Transform>
+</Instance>
+<Instance name="90790A185_Black-Oxide Steel High-Heavy-Profile Cap Nut-1" uid="90790A185_Black-Oxide Steel High-Heavy-Profile Cap Nut-1" entityUid="90790A185_Black-Oxide Steel High-Heavy-Profile Cap Nut*:*90790A185">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130195 0.78718268918797452 1.2951693696149331</Translation>
+</Transform>
+</Instance>
+<Instance name="93413A312_Black Super-Corrosion-Resistant-Coated Steel Washer-1" uid="93413A312_Black Super-Corrosion-Resistant-Coated Steel Washer-1" entityUid="93413A312_Black Super-Corrosion-Resistant-Coated Steel Washer*:*93413A312">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130195 0.78718268918797463 1.316124369614933</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-3" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-3" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>0.14120295625654494 0.98998066907612514 0 -0.98998066907612514 0.14120295625654494 1.0670588039653029e-16 1.0683526624888836e-16 0 1</Rotation>
+<Translation>0.68606456603129784 0.87218268918797459 1.3081043696149328</Translation>
+</Transform>
+</Instance>
+<Instance name="91259A628_Alloy Steel Shoulder Screw-1" uid="91259A628_Alloy Steel Shoulder Screw-1" entityUid="91259A628_Alloy Steel Shoulder Screw*:*91259A628">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130195 0.78718268918797452 1.3396193696149332</Translation>
+</Transform>
+</Instance>
+<Instance name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-1" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw-1" entityUid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.69905494708806337 0.89468268918797522 1.3081043696149328</Translation>
+</Transform>
+</Instance>
+<Instance name="MotorRotor-1" uid="MotorRotor-1" grounded="true" entityUid="MotorRotor*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130028 0.88718268918797161 1.3021543696149329</Translation>
+</Transform>
+</Instance>
+<Instance name="92510A494_Aluminum Unthreaded Spacer-1" uid="92510A494_Aluminum Unthreaded Spacer-1" entityUid="92510A494_Aluminum Unthreaded Spacer*:*92510A494">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.68606456603130195 0.78718268918797463 1.298661869614933</Translation>
+</Transform>
+</Instance>
+<Instance name="ServoArm-1" uid="ServoArm-1" entityUid="ServoArm*:*Default">
+<Transform>
+<Rotation>4.7997738696155102e-14 0.99999999999999989 0 -0.99999999999999989 4.7989390239422391e-14 0 0 0 0.99999999999999989</Rotation>
+<Translation>0.68606456603129717 0.88718268918797449 1.3021543696149331</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="HeimJoint No Ball-6" uid="HeimJoint No Ball-6" entityUid="HeimJoint No Ball" rigid="true">
+<Transform>
+<Rotation>0.49803764356745506 -0.7879177935324585 0.36213817283561645 -0.86262650274056929 -0.49279111131588049 0.11415970119807634 0.088510012763252766 -0.36924581411710239 -0.92510729453271912</Rotation>
+<Translation>0.052302352547876629 1.2402027716244695 1.3664151040277515</Translation>
+</Transform>
+<Instance name="8422N111_18-8 Stainless Steel Turnbuckle-Style Connecting Rod-1" uid="8422N111_18-8 Stainless Steel Turnbuckle-Style Connecting Rod-1" grounded="true" entityUid="8422N111_18-8 Stainless Steel Turnbuckle-Style Connecting Rod*:*8422N111">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>1.0384677785390279 1.0186462104320528 0.99041922914329916</Translation>
+</Transform>
+</Instance>
+<Instance name="6960T431_Super-Swivel Ball Joint Rod End No Ball-1" uid="6960T431_Super-Swivel Ball Joint Rod End No Ball-1" entityUid="6960T431_Super-Swivel Ball Joint Rod End No Ball*:*6960T431">
+<Transform>
+<Rotation>0 0 -0.99999999999999989 -1.0000000000000002 0 0 0 1 0</Rotation>
+<Translation>1.0384677785390279 1.0186462104320526 1.1499654791432992</Translation>
+</Transform>
+</Instance>
+<Instance name="6960T432_Super-Swivel Ball Joint Rod End No Ball-1" uid="6960T432_Super-Swivel Ball Joint Rod End No Ball-1" entityUid="6960T432_Super-Swivel Ball Joint Rod End No Ball*:*6960T432">
+<Transform>
+<Rotation>1.1796119636642288e-16 0 0.99999999999999989 -1.0000000000000002 -1.1102230246251565e-16 0 0 -1 0</Rotation>
+<Translation>1.0384677785390279 1.0186462104320528 0.83087297914329916</Translation>
+</Transform>
+</Instance>
+</Instance>
+</InstanceTree>
+<Constraints>
+<Concentric name="Concentric1">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Base_a-1</Uid>
+<Uid>Base_Side_a-1</Uid>
+<Uid>MotorStator-1</Uid>
+</InstancePath>
+<Position>0 0 0.034000000000000002</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>MotorRotor_a-1</Uid>
+<Uid>MotorRotor-1</Uid>
+</InstancePath>
+<Position>0 0 -0.034500000000000003</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric2">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Base_a-1</Uid>
+<Uid>Base_Side_a-1</Uid>
+<Uid>MotorStator-2</Uid>
+</InstancePath>
+<Position>0 0 0.034000000000000002</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>MotorRotor_a-2</Uid>
+<Uid>MotorRotor-1</Uid>
+</InstancePath>
+<Position>0 0 -0.034500000000000003</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric3">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Base_a-1</Uid>
+<Uid>Base_Side_a-2</Uid>
+<Uid>MotorStator-1</Uid>
+</InstancePath>
+<Position>0 0 0.034000000000000002</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>MotorRotor_a-3</Uid>
+<Uid>MotorRotor-1</Uid>
+</InstancePath>
+<Position>0 0 -0.034499999999999975</Position>
+<Axis>0 -1.1102230246181953e-16 1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric4">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Base_a-1</Uid>
+<Uid>Base_Side_a-2</Uid>
+<Uid>MotorStator-2</Uid>
+</InstancePath>
+<Position>0 0 0.034000000000000002</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>MotorRotor_a-4</Uid>
+<Uid>MotorRotor-1</Uid>
+</InstancePath>
+<Position>0 0 -0.034500000000000003</Position>
+<Axis>0 0 0.99999999999999989</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric5">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Base_a-1</Uid>
+<Uid>Base_Side_a-3</Uid>
+<Uid>MotorStator-1</Uid>
+</InstancePath>
+<Position>0 0 0.034000000000000002</Position>
+<Axis>0 0 -1.0000000000000002</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>MotorRotor_a-5</Uid>
+<Uid>MotorRotor-1</Uid>
+</InstancePath>
+<Position>0 0 -0.034500000000000003</Position>
+<Axis>0 0 0.99999999999999978</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric6">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Base_a-1</Uid>
+<Uid>Base_Side_a-3</Uid>
+<Uid>MotorStator-2</Uid>
+</InstancePath>
+<Position>0 0 0.034000000000000002</Position>
+<Axis>0 0 -1.0000000000000002</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>MotorRotor_a-6</Uid>
+<Uid>MotorRotor-1</Uid>
+</InstancePath>
+<Position>0 0 -0.034499999999999975</Position>
+<Axis>0 0 0.99999999999999978</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident16">
+<ConstraintGeometry geomType="point">
+<InstancePath>
+<Uid>MotorRotor_a-1</Uid>
+<Uid>ball-1</Uid>
+</InstancePath>
+<Position>0 0.026987499999999998 0</Position>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="point">
+<InstancePath>
+<Uid>HeimJoint No Ball-1</Uid>
+<Uid>6960T431_Super-Swivel Ball Joint Rod End No Ball-1</Uid>
+</InstancePath>
+<Position>0 0.019843749999999993 0</Position>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident18">
+<ConstraintGeometry geomType="point">
+<InstancePath>
+<Uid>MotorRotor_a-2</Uid>
+<Uid>ball-1</Uid>
+</InstancePath>
+<Position>0 0.026987499999999998 0</Position>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="point">
+<InstancePath>
+<Uid>HeimJoint No Ball-2</Uid>
+<Uid>6960T431_Super-Swivel Ball Joint Rod End No Ball-1</Uid>
+</InstancePath>
+<Position>0 0.01984375 0</Position>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident19">
+<ConstraintGeometry geomType="point">
+<InstancePath>
+<Uid>MotorRotor_a-3</Uid>
+<Uid>ball-1</Uid>
+</InstancePath>
+<Position>0 0.02698749999999997 0</Position>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="point">
+<InstancePath>
+<Uid>HeimJoint No Ball-3</Uid>
+<Uid>6960T431_Super-Swivel Ball Joint Rod End No Ball-1</Uid>
+</InstancePath>
+<Position>0 0.019843749999999993 0</Position>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident20">
+<ConstraintGeometry geomType="point">
+<InstancePath>
+<Uid>MotorRotor_a-4</Uid>
+<Uid>ball-1</Uid>
+</InstancePath>
+<Position>0 0.02698749999999997 0</Position>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="point">
+<InstancePath>
+<Uid>HeimJoint No Ball-4</Uid>
+<Uid>6960T431_Super-Swivel Ball Joint Rod End No Ball-1</Uid>
+</InstancePath>
+<Position>0 0.019843749999999979 0</Position>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident21">
+<ConstraintGeometry geomType="point">
+<InstancePath>
+<Uid>MotorRotor_a-5</Uid>
+<Uid>ball-1</Uid>
+</InstancePath>
+<Position>0 0.026987499999999998 0</Position>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="point">
+<InstancePath>
+<Uid>HeimJoint No Ball-5</Uid>
+<Uid>6960T431_Super-Swivel Ball Joint Rod End No Ball-1</Uid>
+</InstancePath>
+<Position>0 0.019843750000000007 0</Position>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident22">
+<ConstraintGeometry geomType="point">
+<InstancePath>
+<Uid>MotorRotor_a-6</Uid>
+<Uid>ball-1</Uid>
+</InstancePath>
+<Position>0 0.026987500000000025 0</Position>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="point">
+<InstancePath>
+<Uid>HeimJoint No Ball-6</Uid>
+<Uid>6960T431_Super-Swivel Ball Joint Rod End No Ball-1</Uid>
+</InstancePath>
+<Position>0 0.01984375 0</Position>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident24">
+<ConstraintGeometry geomType="point">
+<InstancePath>
+<Uid>HeimJoint No Ball-1</Uid>
+<Uid>6960T432_Super-Swivel Ball Joint Rod End No Ball-1</Uid>
+</InstancePath>
+<Position>0 0.019843749999999993 0</Position>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="point">
+<InstancePath>
+<Uid>Platform_a-1</Uid>
+<Uid>U_channel_a-1</Uid>
+<Uid>ball-1</Uid>
+</InstancePath>
+<Position>0 0.026987499999999942 0</Position>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident26">
+<ConstraintGeometry geomType="point">
+<InstancePath>
+<Uid>HeimJoint No Ball-2</Uid>
+<Uid>6960T432_Super-Swivel Ball Joint Rod End No Ball-1</Uid>
+</InstancePath>
+<Position>0 0.019843749999999993 0</Position>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="point">
+<InstancePath>
+<Uid>Platform_a-1</Uid>
+<Uid>U_channel_a-1</Uid>
+<Uid>ball-2</Uid>
+</InstancePath>
+<Position>0 0.026987499999999998 0</Position>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident28">
+<ConstraintGeometry geomType="point">
+<InstancePath>
+<Uid>HeimJoint No Ball-3</Uid>
+<Uid>6960T432_Super-Swivel Ball Joint Rod End No Ball-1</Uid>
+</InstancePath>
+<Position>0 0.019843750000000049 0</Position>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="point">
+<InstancePath>
+<Uid>Platform_a-1</Uid>
+<Uid>U_channel_a-2</Uid>
+<Uid>ball-1</Uid>
+</InstancePath>
+<Position>0 0.026987499999999998 0</Position>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident36">
+<ConstraintGeometry geomType="point">
+<InstancePath>
+<Uid>HeimJoint No Ball-4</Uid>
+<Uid>6960T432_Super-Swivel Ball Joint Rod End No Ball-1</Uid>
+</InstancePath>
+<Position>0 0.019843749999999993 0</Position>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="point">
+<InstancePath>
+<Uid>Platform_a-1</Uid>
+<Uid>U_channel_a-2</Uid>
+<Uid>ball-2</Uid>
+</InstancePath>
+<Position>0 0.026987499999999998 0</Position>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident38">
+<ConstraintGeometry geomType="point">
+<InstancePath>
+<Uid>HeimJoint No Ball-5</Uid>
+<Uid>6960T432_Super-Swivel Ball Joint Rod End No Ball-1</Uid>
+</InstancePath>
+<Position>0 0.019843749999999993 0</Position>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="point">
+<InstancePath>
+<Uid>Platform_a-1</Uid>
+<Uid>U_channel_a-3</Uid>
+<Uid>ball-1</Uid>
+</InstancePath>
+<Position>0 0.026987499999999998 0</Position>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident43">
+<ConstraintGeometry geomType="point">
+<InstancePath>
+<Uid>HeimJoint No Ball-6</Uid>
+<Uid>6960T432_Super-Swivel Ball Joint Rod End No Ball-1</Uid>
+</InstancePath>
+<Position>0 0.019843749999999993 0</Position>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="point">
+<InstancePath>
+<Uid>Platform_a-1</Uid>
+<Uid>U_channel_a-3</Uid>
+<Uid>ball-2</Uid>
+</InstancePath>
+<Position>0 0.026987499999999998 0</Position>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident44">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Base_a-1</Uid>
+<Uid>Base_Side_a-1</Uid>
+<Uid>MotorStator-1</Uid>
+</InstancePath>
+<Position>0 0 -0.0010000000000000009</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>MotorRotor_a-1</Uid>
+<Uid>MotorRotor-1</Uid>
+</InstancePath>
+<Position>0 0 -0.034500000000000003</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident45">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Base_a-1</Uid>
+<Uid>Base_Side_a-1</Uid>
+<Uid>MotorStator-2</Uid>
+</InstancePath>
+<Position>0 0 -0.0010000000000000009</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>MotorRotor_a-2</Uid>
+<Uid>MotorRotor-1</Uid>
+</InstancePath>
+<Position>0 0 -0.034500000000000003</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident46">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>MotorRotor_a-3</Uid>
+<Uid>MotorRotor-1</Uid>
+</InstancePath>
+<Position>0 0 -0.034499999999999975</Position>
+<Axis>0 1.1102230246181953e-16 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Base_a-1</Uid>
+<Uid>Base_Side_a-2</Uid>
+<Uid>MotorStator-1</Uid>
+</InstancePath>
+<Position>0 0 -0.0010000000000000009</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident47">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Base_a-1</Uid>
+<Uid>Base_Side_a-2</Uid>
+<Uid>MotorStator-2</Uid>
+</InstancePath>
+<Position>0 0 -0.0010000000000000009</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>MotorRotor_a-4</Uid>
+<Uid>MotorRotor-1</Uid>
+</InstancePath>
+<Position>0 0 -0.034500000000000003</Position>
+<Axis>0 0 -0.99999999999999989</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident48">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Base_a-1</Uid>
+<Uid>Base_Side_a-3</Uid>
+<Uid>MotorStator-1</Uid>
+</InstancePath>
+<Position>0 0 -0.0010000000000000009</Position>
+<Axis>0 0 -1.0000000000000002</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>MotorRotor_a-5</Uid>
+<Uid>MotorRotor-1</Uid>
+</InstancePath>
+<Position>0 0 -0.034500000000000003</Position>
+<Axis>0 0 -0.99999999999999978</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident49">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Base_a-1</Uid>
+<Uid>Base_Side_a-3</Uid>
+<Uid>MotorStator-2</Uid>
+</InstancePath>
+<Position>0 0 -0.0010000000000000009</Position>
+<Axis>0 0 -1.0000000000000002</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>MotorRotor_a-6</Uid>
+<Uid>MotorRotor-1</Uid>
+</InstancePath>
+<Position>0 0 -0.034499999999999975</Position>
+<Axis>0 0 -0.99999999999999978</Axis>
+</ConstraintGeometry>
+</Coincident>
+</Constraints>
+</RootAssembly>
+<Assemblies>
+<Assembly name="Base_a" uid="Base_a" version="150">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="Base_a.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+<Assembly name="Base_Side_a" uid="Base_Side_a" version="288">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="Base_Side_a.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+<Assembly name="MotorRotor_a" uid="MotorRotor_a" version="143">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="MotorRotor_a.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+<Assembly name="HeimJoint No Ball" uid="HeimJoint No Ball" version="138">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="HeimJoint No Ball.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+<Assembly name="Platform_a" uid="Platform_a" version="159">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="Platform_a.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+<Assembly name="U_channel_a" uid="U_channel_a" version="178">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="U_channel_a.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+</Assemblies>
+<Parts>
+<Part name="1942K49_303 Stainless Steel Rigid Leveling Mount with Nylon Cushion" uid="1942K49_303 Stainless Steel Rigid Leveling Mount with Nylon Cushion*:*1942K49" version="4185">
+<ModelUnits mass="kilogram" length="inch"/>
+<PartFile name="1942K49_303 Stainless Steel Rigid Leveling Mount with Nylon Cushion.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.61867423532470689</Mass>
+<CenterOfMass>1.0148880766387129e-07 0.025234319234993308 -2.8851015075208097e-07</CenterOfMass>
+<Inertia>0.0013220735438850243 0.00040625767215366496 0.0013221203908212881 8.1030016544055933e-09 -2.488235795284726e-08 -2.860803421127028e-09</Inertia>
+</MassProperties>
+<GeometryFile name="1942K49_303 Stainless Steel Rigid Leveling Mount with Nylon Cushion_1942K49_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.52078431372549028" g="0.49568627450980396" b="0.4705882352941177" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="3310T432_Strut Channel" uid="3310T432_Strut Channel*:*3310T432" version="341">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="3310T432_Strut Channel.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.26313911919516236</Mass>
+<CenterOfMass>0.0024125550417387091 0 0</CenterOfMass>
+<Inertia>0.00030176952391443393 0.00028775371475513254 0.00013097705050327374 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="3310T432_Strut Channel_3310T432_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.52078431372549028" g="0.49568627450980396" b="0.4705882352941177" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="6960T431_Super-Swivel Ball Joint Rod End No Ball" uid="6960T431_Super-Swivel Ball Joint Rod End No Ball*:*6960T431" version="1244">
+<ModelUnits mass="kilogram" length="inch"/>
+<PartFile name="6960T431_Super-Swivel Ball Joint Rod End No Ball.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.063883686120223299</Mass>
+<CenterOfMass>-6.9647617140620588e-08 -0.0066918581217985636 3.644971745498808e-07</CenterOfMass>
+<Inertia>2.0072867761763325e-05 3.2540253874177545e-06 2.1505808668264437e-05 -5.5560451626003614e-11 1.5731505895643245e-12 2.594054389880157e-10</Inertia>
+</MassProperties>
+<GeometryFile name="6960T431_Super-Swivel Ball Joint Rod End No Ball_6960T431_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.52078431372549028" g="0.49568627450980396" b="0.4705882352941177" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="6960T432_Super-Swivel Ball Joint Rod End No Ball" uid="6960T432_Super-Swivel Ball Joint Rod End No Ball*:*6960T432" version="1962">
+<ModelUnits mass="kilogram" length="inch"/>
+<PartFile name="6960T432_Super-Swivel Ball Joint Rod End No Ball.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.063801730376029916</Mass>
+<CenterOfMass>-6.7490151970131725e-08 -0.0066640543378415429 -2.1835198877008551e-07</CenterOfMass>
+<Inertia>2.0032892737179036e-05 3.2479404436790118e-06 2.146286348580935e-05 2.1532613450166302e-10 4.053056366519973e-12 2.2830729764149764e-10</Inertia>
+</MassProperties>
+<GeometryFile name="6960T432_Super-Swivel Ball Joint Rod End No Ball_6960T432_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.52078431372549028" g="0.49568627450980396" b="0.4705882352941177" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="8422N111_18-8 Stainless Steel Turnbuckle-Style Connecting Rod" uid="8422N111_18-8 Stainless Steel Turnbuckle-Style Connecting Rod*:*8422N111" version="519">
+<ModelUnits mass="kilogram" length="inch"/>
+<PartFile name="8422N111_18-8 Stainless Steel Turnbuckle-Style Connecting Rod.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.17086301093516096</Mass>
+<CenterOfMass>-1.3076510255620606e-07 -4.0031598448962927e-07 8.9807719449440364e-06</CenterOfMass>
+<Inertia>0.0012086768663892567 0.0012086766491444195 2.0206599730398041e-06 2.3361480162730086e-09 1.8178332506246491e-09 1.3482327184312934e-10</Inertia>
+</MassProperties>
+<GeometryFile name="8422N111_18-8 Stainless Steel Turnbuckle-Style Connecting Rod_8422N111_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.52078431372549028" g="0.49568627450980396" b="0.4705882352941177" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="90098A115_Extra-Wide Thin Nylon-Insert Locknut" uid="90098A115_Extra-Wide Thin Nylon-Insert Locknut*:*90098A115" version="776">
+<ModelUnits mass="kilogram" length="inch"/>
+<PartFile name="90098A115_Extra-Wide Thin Nylon-Insert Locknut.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0022220888278434107</Mass>
+<CenterOfMass>-1.8955866254364384e-06 0.0011162374190247142 1.0981798463650425e-06</CenterOfMass>
+<Inertia>4.4438154766781903e-08 6.9863431186776042e-08 4.4436580400600078e-08 4.1206421828376164e-12 1.2960885312088443e-12 -1.1149797681824368e-11</Inertia>
+</MassProperties>
+<GeometryFile name="90098A115_Extra-Wide Thin Nylon-Insert Locknut_90098A115_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.52078431372549028" g="0.49568627450980396" b="0.4705882352941177" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="90576A137_Medium-Strength Steel Nylon-Insert Locknut" uid="90576A137_Medium-Strength Steel Nylon-Insert Locknut*:*90576A137" version="503">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="90576A137_Medium-Strength Steel Nylon-Insert Locknut.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.01659514956428931</Mass>
+<CenterOfMass>-1.4901779031839026e-06 3.1660906595142826e-06 -0.00083810142916911643</CenterOfMass>
+<Inertia>6.9651258145187389e-07 6.9649104865739927e-07 1.096029813528874e-06 3.3636395367354134e-11 6.4631927833800961e-11 1.9690025564520512e-11</Inertia>
+</MassProperties>
+<GeometryFile name="90576A137_Medium-Strength Steel Nylon-Insert Locknut_90576A137_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.52078431372549028" g="0.49568627450980396" b="0.4705882352941177" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="90790A185_Black-Oxide Steel High-Heavy-Profile Cap Nut" uid="90790A185_Black-Oxide Steel High-Heavy-Profile Cap Nut*:*90790A185" version="1140">
+<ModelUnits mass="kilogram" length="inch"/>
+<PartFile name="90790A185_Black-Oxide Steel High-Heavy-Profile Cap Nut.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.020866489335412085</Mass>
+<CenterOfMass>6.6755333845634906e-07 1.4097013080781958e-07 -0.0076932196590872564</CenterOfMass>
+<Inertia>7.8569322124243843e-07 7.8568723146994616e-07 7.6993927725978087e-07 -5.0016630039767127e-11 1.1751783886944639e-10 -2.0407143604301969e-11</Inertia>
+</MassProperties>
+<GeometryFile name="90790A185_Black-Oxide Steel High-Heavy-Profile Cap Nut_90790A185_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.52078431372549028" g="0.49568627450980396" b="0.4705882352941177" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="91259A484_Alloy Steel Shoulder Screw" uid="91259A484_Alloy Steel Shoulder Screw*:*91259A484" version="846">
+<ModelUnits mass="kilogram" length="inch"/>
+<PartFile name="91259A484_Alloy Steel Shoulder Screw.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.033251189119996971</Mass>
+<CenterOfMass>1.6016330437293865e-07 -8.0575158352939802e-07 0.0051991065493581122</CenterOfMass>
+<Inertia>9.9706992063454793e-06 9.9706749116854134e-06 4.7032463956694915e-07 -7.9952282492009571e-10 2.2939499532384699e-10 -1.1750501883567641e-11</Inertia>
+</MassProperties>
+<GeometryFile name="91259A484_Alloy Steel Shoulder Screw_91259A484_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.52078431372549028" g="0.49568627450980396" b="0.4705882352941177" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="91259A628_Alloy Steel Shoulder Screw" uid="91259A628_Alloy Steel Shoulder Screw*:*91259A628" version="804">
+<ModelUnits mass="kilogram" length="inch"/>
+<PartFile name="91259A628_Alloy Steel Shoulder Screw.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.031601482074132395</Mass>
+<CenterOfMass>-1.6367242640528674e-06 -3.9709851961894254e-07 -0.017121913521931893</CenterOfMass>
+<Inertia>8.5713163899154601e-06 8.5713410557263358e-06 4.4994125912410545e-07 -2.3602123688869069e-10 -1.4878755806802626e-09 -5.6338173538818084e-12</Inertia>
+</MassProperties>
+<GeometryFile name="91259A628_Alloy Steel Shoulder Screw_91259A628_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.52078431372549028" g="0.49568627450980396" b="0.4705882352941177" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="91259A710_Alloy Steel Shoulder Screw" uid="91259A710_Alloy Steel Shoulder Screw*:*91259A710" version="660">
+<ModelUnits mass="kilogram" length="inch"/>
+<PartFile name="91259A710_Alloy Steel Shoulder Screw.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.041774977843790452</Mass>
+<CenterOfMass>-2.2984988246658417e-06 -5.558436606545765e-07 -0.0073149823404952486</CenterOfMass>
+<Inertia>6.2212819734083188e-06 6.2213310482112111e-06 1.2102577236561837e-06 -1.9997108733420712e-10 -2.0560368466345719e-09 -1.5886389302984683e-11</Inertia>
+</MassProperties>
+<GeometryFile name="91259A710_Alloy Steel Shoulder Screw_91259A710_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.52078431372549028" g="0.49568627450980396" b="0.4705882352941177" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw" uid="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw*:*91273A784" version="6240">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0020471701061959714</Mass>
+<CenterOfMass>-5.378095357932594e-08 -6.7117832739307805e-08 0.0015563304629855014</CenterOfMass>
+<Inertia>6.9973252018634806e-08 6.9973900117882326e-08 5.4363620598889122e-09 -3.0094696199026557e-12 1.3545014273796223e-12 1.5672082915598247e-13</Inertia>
+</MassProperties>
+<GeometryFile name="91273A784_Same-Size Thread 18-8 Stainless Steel Shoulder Screw_91273A784_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.52078431372549028" g="0.49568627450980396" b="0.4705882352941177" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="92196A319_18-8 Stainless Steel Socket Head Screw" uid="92196A319_18-8 Stainless Steel Socket Head Screw*:*92196A319" version="1911">
+<ModelUnits mass="kilogram" length="inch"/>
+<PartFile name="92196A319_18-8 Stainless Steel Socket Head Screw.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0061427221095856493</Mass>
+<CenterOfMass>1.4128239917972366e-07 -1.7410021729859948e-06 0.013148100958450926</CenterOfMass>
+<Inertia>2.8001121982493937e-07 2.8001562232691818e-07 5.1306343556730394e-08 -2.3116037534753031e-11 5.729991954955378e-11 5.8185983125270258e-13</Inertia>
+</MassProperties>
+<GeometryFile name="92196A319_18-8 Stainless Steel Socket Head Screw_92196A319_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.52078431372549028" g="0.49568627450980396" b="0.4705882352941177" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="92510A494_Aluminum Unthreaded Spacer" uid="92510A494_Aluminum Unthreaded Spacer*:*92510A494" version="312">
+<ModelUnits mass="kilogram" length="inch"/>
+<PartFile name="92510A494_Aluminum Unthreaded Spacer.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0012474067676687653</Mass>
+<CenterOfMass>0 0 0</CenterOfMass>
+<Inertia>2.6142913282185241e-08 2.6142913282185241e-08 4.2244223727744933e-08 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="92510A494_Aluminum Unthreaded Spacer_92510A494_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.8666666666666667" g="0.90980392156862744" b="1" a="1"/>
+<Diffuse r="0.8666666666666667" g="0.90980392156862744" b="1" a="1"/>
+<Specular r="0.43333333333333335" g="0.45490196078431372" b="0.5" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="93413A312_Black Super-Corrosion-Resistant-Coated Steel Washer" uid="93413A312_Black Super-Corrosion-Resistant-Coated Steel Washer*:*93413A312" version="274">
+<ModelUnits mass="kilogram" length="inch"/>
+<PartFile name="93413A312_Black Super-Corrosion-Resistant-Coated Steel Washer.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0061832318282405317</Mass>
+<CenterOfMass>0 0 -2.0865325843711388e-06</CenterOfMass>
+<Inertia>2.2916208893484708e-07 2.2916208893484702e-07 4.5169552868890522e-07 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="93413A312_Black Super-Corrosion-Resistant-Coated Steel Washer_93413A312_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="1" g="0.94901960784313721" b="0.90980392156862744" a="1"/>
+<Diffuse r="1" g="0.94901960784313721" b="0.90980392156862744" a="1"/>
+<Specular r="0.5" g="0.47450980392156861" b="0.45490196078431372" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="95245A233_Grade B7 Medium-Strength Steel Threaded Rod" uid="95245A233_Grade B7 Medium-Strength Steel Threaded Rod*:*95245A233" version="673">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="95245A233_Grade B7 Medium-Strength Steel Threaded Rod.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.064714148278392003</Mass>
+<CenterOfMass>-1.1586082742614803e-06 -4.0981380854153192e-07 -1.2038708169726641e-07</CenterOfMass>
+<Inertia>3.7602659279833346e-05 3.7601157707582482e-05 1.0497147588127091e-06 -8.2458994664928141e-10 9.5668718944740491e-10 -4.9916719545694199e-09</Inertia>
+</MassProperties>
+<GeometryFile name="95245A233_Grade B7 Medium-Strength Steel Threaded Rod_95245A233_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.52078431372549028" g="0.49568627450980396" b="0.4705882352941177" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="MotorRotor" uid="MotorRotor*:*Default" version="188">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="MotorRotor.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.54400000000000004</Mass>
+<CenterOfMass>0 0 -0.017454074541929817</CenterOfMass>
+<Inertia>0.00011341908458246223 0.00011341908458246219 0.00012101310122494668 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="MotorRotor_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.45294117647058824" g="0.43372549019607842" b="0.41176470588235292" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="MotorStator" uid="MotorStator*:*Default" version="558">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="MotorStator.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>1.5437523489467895</Mass>
+<CenterOfMass>0 7.9668226152768276e-05 0.014090581648427183</CenterOfMass>
+<Inertia>0.0012068556647670155 0.001210978370433683 0.0020250801485272763 2.3171656679163292e-06 0 -1.4734337939419315e-15</Inertia>
+</MassProperties>
+<GeometryFile name="MotorStator_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.20000000000000001" g="0.20000000000000001" b="0.20000000000000001" a="1"/>
+<Diffuse r="0.20000000000000001" g="0.20000000000000001" b="0.20000000000000001" a="1"/>
+<Specular r="0.16000000000000003" g="0.16000000000000003" b="0.16000000000000003" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Platform" uid="Platform*:*Default" version="133">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Platform.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>1.5294130014613749</Mass>
+<CenterOfMass>0 0 0</CenterOfMass>
+<Inertia>0.0056598396479293385 0.0056598396479293333 0.011278566125357721 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="Platform_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.8666666666666667" g="0.90980392156862744" b="1" a="1"/>
+<Diffuse r="0.8666666666666667" g="0.90980392156862744" b="1" a="1"/>
+<Specular r="0.43333333333333335" g="0.45490196078431372" b="0.5" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="ServoArm" uid="ServoArm*:*Default" version="176">
+<ModelUnits mass="kilogram" length="inch"/>
+<PartFile name="ServoArm.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.52702172312555051</Mass>
+<CenterOfMass>0.050634639379924955 0 0.0063500000000000006</CenterOfMass>
+<Inertia>8.1645495504421614e-05 0.00077483308228481183 0.00084231135550208002 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="ServoArm_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="1" g="0.94901960784313721" b="0.90980392156862744" a="1"/>
+<Diffuse r="1" g="0.94901960784313721" b="0.90980392156862744" a="1"/>
+<Specular r="0.5" g="0.47450980392156861" b="0.45490196078431372" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="ball" uid="ball*:*6960T431" version="1465">
+<ModelUnits mass="kilogram" length="inch"/>
+<PartFile name="ball.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.027354310564505085</Mass>
+<CenterOfMass>0 0.026987499999999998 0</CenterOfMass>
+<Inertia>1.4088594579752731e-06 1.408995614038069e-06 1.4785239801894813e-06 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="ball_6960T431_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.52078431372549028" g="0.49568627450980396" b="0.4705882352941177" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="base_plate_corner_connector_mm" uid="base_plate_corner_connector_mm*:*Default" version="771">
+<ModelUnits mass="kilogram" length="inch"/>
+<PartFile name="base_plate_corner_connector_mm.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>1.5611046090127512</Mass>
+<CenterOfMass>0.082982347480918581 0.012699999999999999 0.19689285667291936</CenterOfMass>
+<Inertia>0.00140790343205712 0.0023943325447801349 0.0011590506267858977 0 0.00021551285116789892 0</Inertia>
+</MassProperties>
+<GeometryFile name="base_plate_corner_connector_mm_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Diffuse r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Specular r="0.54352941176470582" g="0.52980392156862743" b="0.51607843137254905" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="base_plate_mm" uid="base_plate_mm*:*Default" version="154">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="base_plate_mm.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>2.7884046299070464</Mass>
+<CenterOfMass>0 0 -0.0026055995065203657</CenterOfMass>
+<Inertia>0.10133792318325678 0.0056841232250052897 0.095728756922044453 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="base_plate_mm_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.8666666666666667" g="0.90980392156862744" b="1" a="1"/>
+<Diffuse r="0.8666666666666667" g="0.90980392156862744" b="1" a="1"/>
+<Specular r="0.43333333333333335" g="0.45490196078431372" b="0.5" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="bumper" uid="bumper*:*Default" version="116">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="bumper.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.27441548411505151</Mass>
+<CenterOfMass>0 0 0.0063499999999999997</CenterOfMass>
+<Inertia>1.719641868532463e-05 0.00032819774844450436 0.00033801742155767627 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="bumper_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Diffuse r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Specular r="0.54352941176470582" g="0.52980392156862743" b="0.51607843137254905" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="prox_sensor" uid="prox_sensor*:*95245A233" version="843">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="prox_sensor.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.017169223085975495</Mass>
+<CenterOfMass>-2.2818982404162394e-07 -3.0354413283908775e-05 0.0067219369806393817</CenterOfMass>
+<Inertia>6.2431933099715061e-06 6.2413326685283209e-06 2.6055071734668052e-07 1.8257022809222376e-08 2.1519037282542044e-10 -6.9520513428611623e-11</Inertia>
+</MassProperties>
+<GeometryFile name="prox_sensor_95245A233_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.8666666666666667" g="0.90980392156862744" b="1" a="1"/>
+<Diffuse r="0.8666666666666667" g="0.90980392156862744" b="1" a="1"/>
+<Specular r="0.43333333333333335" g="0.45490196078431372" b="0.5" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="spacer" uid="spacer*:*Default" version="115">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="spacer.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.15316065292376904</Mass>
+<CenterOfMass>0 0 0.016750000000000004</CenterOfMass>
+<Inertia>2.4317444498584256e-05 2.4317444498584256e-05 1.9987465206551863e-05 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="spacer_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="1" g="0.94901960784313721" b="0.90980392156862744" a="1"/>
+<Diffuse r="1" g="0.94901960784313721" b="0.90980392156862744" a="1"/>
+<Specular r="0.5" g="0.47450980392156861" b="0.45490196078431372" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+</Parts>
+</SimscapeMultibodyImportXML>
