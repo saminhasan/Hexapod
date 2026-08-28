@@ -1,0 +1,87 @@
+# ---------------------------------------------------------------------------
+# MATLAB / Simulink
+# ---------------------------------------------------------------------------
+
+# Simulink/Simscape build + code-generation output
+slprj/
+_slprj/
+sccprj/
+codegen/
+
+# Compiled Simulink caches and accelerator targets
+*.slxc
+*.mexw32
+*.mexw64
+*.mexa64
+*.mexmaci64
+*.mexmaca64
+*.mex
+
+# Simulink autosave / backup / recovery
+*.slx.r*
+*.slx.autosave
+*.mdl.r*
+*.mdl.autosave
+*.slx.bak
+*.mdl.bak
+*.m~
+*.asv
+
+# MATLAB Coder / Report Generator output
+*.prj.bak
+html/
+*.mlappinstall
+*.mltbx
+
+# Simulink cache and temp
+*.slxp
+*.sldd.bak
+temp/
+tmwinternal/
+
+# Model Advisor / Performance Advisor reports
+**/slprj/modeladvisor/
+
+# ---------------------------------------------------------------------------
+# Build byproducts (from raccel/accel targets)
+# ---------------------------------------------------------------------------
+*.obj
+*.o
+*.lib
+*.exp
+*.dll
+*.so
+*.dylib
+*.pdb
+*.ilk
+*.rsp
+*.def
+*.bc
+
+# ---------------------------------------------------------------------------
+# CAD
+# ---------------------------------------------------------------------------
+
+# SolidWorks backup / lock / temp files
+*.SLDPRT.bak
+*.SLDASM.bak
+*.SLDDRW.bak
+~$*
+*.sldlfp.bak
+*.swp
+
+# ---------------------------------------------------------------------------
+# Local edits kept out of history
+# ---------------------------------------------------------------------------
+*.orig
+
+# ---------------------------------------------------------------------------
+# OS / editor
+# ---------------------------------------------------------------------------
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+.vscode/
+.idea/
