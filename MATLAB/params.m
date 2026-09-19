@@ -58,13 +58,11 @@ wn = 2*pi*bw / r_bw;
 p3 = b + wf - 2*zeta*wn;
 
 % Controller gains
-Kp = (p3 * wn^2) / (a * wf);
-
-Kd = (wn^2 + 2*zeta*wn*p3 - b*wf - a*Kp) ...
-     / (a * wf);
-
-% Velocity feedforward
-Kv = Kd + b/a;
+% Kp = (p3 * wn^2) / (a * wf);
+% Kd = (wn^2 + 2*zeta*wn*p3 - b*wf - a*Kp) / (a * wf);
+% % Velocity feedforward
+% Kv = Kd + b/a;
+Kp = 101; Kd=1.1; Kv = 0.75;
 %%
 function delay =  calcDealy(order, tauK) %#ok<DEFNU>
     syms t tau k

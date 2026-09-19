@@ -80,7 +80,7 @@ time = jointAngles(:,1);
 tf = time(end);
 u = jointAngles(:,2:7);
 du = periodicDerivative5pt(u, dt);
-% writematrix(u, "_.csv");
+% writematrix(u, "output/_.csv");
 simOut = sim("Hexapod_PD.slx");
 % simOut = sim("SP.slx");
 
