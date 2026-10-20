@@ -1,0 +1,396 @@
+<title>Hexapod Run Repeatability</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.27.0/plotly.min.js"></script>
+<script src="data.js"></script>
+<style>
+/* layout: one reading column, one large plot per section with its own channel picker, a thin control strip on top */
+:root{
+  --bg:#fbfcfd; --panel:#ffffff; --fg:#17202a; --fg-2:#465462; --fg-3:#76838f;
+  --rule:#dde3e8; --rule-2:#c3ccd4;
+  --bra:#2563a8; --nobra:#c96a1c; --mean:#000000; --ref:#b4233c;
+  --right:rgba(37,99,168,.10); --left:rgba(201,106,28,.10);
+  --stern:#000000; --lbc:#178a68; --rbc:#7b3fa0;
+  --body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"Roboto Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#11161b; --panel:#171e25; --fg:#e4e9ee; --fg-2:#aab6c1; --fg-3:#7f8c98;
+    --rule:#26313b; --rule-2:#34424e;
+    --bra:#6aa6e8; --nobra:#e9a059; --mean:#e4e9ee; --ref:#f06c84;
+    --right:rgba(106,166,232,.13); --left:rgba(233,160,89,.13);
+    --stern:#e4e9ee; --lbc:#4fd1a5; --rbc:#c38be0;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#11161b; --panel:#171e25; --fg:#e4e9ee; --fg-2:#aab6c1; --fg-3:#7f8c98;
+  --rule:#26313b; --rule-2:#34424e;
+  --bra:#6aa6e8; --nobra:#e9a059; --mean:#e4e9ee; --ref:#f06c84;
+  --right:rgba(106,166,232,.13); --left:rgba(233,160,89,.13);
+  --stern:#e4e9ee; --lbc:#4fd1a5; --rbc:#c38be0;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.55;margin:0}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:20px;padding-block:28px 60px}
+header h1{font-size:1.65rem;font-weight:700;margin:0;letter-spacing:-.01em;text-wrap:balance}
+.controls{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);
+  display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;padding-block:10px;margin-top:14px;
+  border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.ctl{display:flex;align-items:center;gap:8px;font-size:.85rem;color:var(--fg-2)}
+.lab{font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-3)}
+.seg{display:inline-flex;border:1px solid var(--rule-2);border-radius:4px;overflow:hidden}
+.seg button{font:inherit;font-size:.82rem;padding:4px 11px;border:0;background:var(--panel);color:var(--fg-2);cursor:pointer;border-right:1px solid var(--rule)}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--fg);color:var(--bg);font-weight:600}
+button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--bra);outline-offset:1px}
+select{font:inherit;font-size:.85rem;padding:3px 6px;background:var(--panel);color:var(--fg);border:1px solid var(--rule-2);border-radius:4px;max-width:220px}
+section{margin-top:34px}
+section h2{font-size:1.15rem;font-weight:600;margin:0 0 8px}
+.sub{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;margin:0 0 10px}
+.fig{background:var(--panel);border:1px solid var(--rule);min-width:0;margin:0}
+.plot{width:100%;height:min(64vh,580px)}
+figcaption{font-size:.85rem;color:var(--fg-2);padding:10px 14px;border-top:1px solid var(--rule)}
+figcaption b{color:var(--fg);font-weight:600}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.tablewrap{overflow-x:auto;border:1px solid var(--rule);background:var(--panel);margin-top:12px}
+table{border-collapse:collapse;width:100%;font-size:.82rem}
+th,td{padding:5px 10px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--rule)}
+th:first-child,td:first-child,th.l,td.l{text-align:left}
+thead th{font-weight:600;color:var(--fg-2);background:var(--bg)}
+tr.on td{background:var(--right);font-weight:600}
+.note{font-size:.82rem;color:var(--fg-3);margin-top:8px;max-width:90ch}
+h3.row{font-size:.95rem;font-weight:600;margin:16px 0 6px;color:var(--fg-2)}
+@media (max-width:640px){.plot{height:440px} header h1{font-size:1.35rem}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <header><h1>Hexapod Run Repeatability</h1></header>
+
+  <div class="controls" role="toolbar" aria-label="Plot options">
+    <div class="ctl"><span class="lab">Condition</span>
+      <span class="seg" id="cond">
+        <button type="button" data-v="all" aria-pressed="true">Both</button>
+        <button type="button" data-v="bra" aria-pressed="false">Bra</button>
+        <button type="button" data-v="nobra" aria-pressed="false">No bra</button>
+      </span></div>
+    <label class="ctl"><input type="checkbox" id="showLoops" checked> every loop</label>
+    <label class="ctl"><input type="checkbox" id="showBand" checked> mean &plusmn; 1 SD</label>
+    <label class="ctl"><span class="lab">Highlight</span>
+      <select id="hl"><option value="-1">none</option></select></label>
+  </div>
+
+  <section id="motors">
+    <h2>Motor angles, reference and actual</h2>
+    <div class="sub">
+      <label class="ctl"><span class="lab">Motor</span>
+        <select id="motor"><option value="0">motor 1</option><option value="1">motor 2</option><option value="2">motor 3</option>
+          <option value="3">motor 4</option><option value="4">motor 5</option><option value="5">motor 6</option></select></label>
+      <span class="ctl"><span class="lab">Show</span>
+        <span class="seg" id="mmode">
+          <button type="button" data-v="angle" aria-pressed="true">Angle</button>
+          <button type="button" data-v="err" aria-pressed="false">Actual &minus; reference</button>
+          <button type="button" data-v="dev" aria-pressed="false">Actual &minus; mean</button>
+        </span></span>
+    </div>
+    <figure class="fig">
+      <div id="pMotor" class="plot"></div>
+    </figure>
+  </section>
+
+  <section id="imu">
+    <h2>Torso IMU over the 11 s loop</h2>
+    <div class="sub">
+      <label class="ctl"><span class="lab">Channel</span><select id="chImu" class="ch"></select></label>
+      <label class="ctl"><input type="checkbox" id="showSteps"> shade right and left steps</label>
+      <span class="ctl">Low-passed at 100 Hz, zero phase.</span>
+    </div>
+    <figure class="fig">
+      <div id="pImu" class="plot"></div>
+      <figcaption id="capImu"></figcaption>
+    </figure>
+  </section>
+
+  <section id="lbreast">
+    <h2>Left breast IMU over the 11 s loop</h2>
+    <div class="sub">
+      <label class="ctl"><span class="lab">Channel</span><select id="chLb"><option value="0">ax</option><option value="1">ay</option><option value="2">az</option></select></label>
+      <span class="ctl">x forward, y left, z up (levelled on gravity at rest). Run mean removed, low-passed at 100 Hz.</span>
+    </div>
+    <figure class="fig"><div id="pLb" class="plot"></div></figure>
+  </section>
+
+  <section id="rbreast">
+    <h2>Right breast IMU over the 11 s loop</h2>
+    <div class="sub">
+      <label class="ctl"><span class="lab">Channel</span><select id="chRb"><option value="0">ax</option><option value="1">ay</option><option value="2">az</option></select></label>
+      <span class="ctl">Bra runs only. x forward, y left, z up (levelled on gravity at rest). Run mean removed, low-passed at 100 Hz.</span>
+    </div>
+    <figure class="fig"><div id="pRb" class="plot"></div></figure>
+  </section>
+
+
+  <section id="stride">
+    <h2>One stride, right step then left step</h2>
+    <div class="sub">
+      <label class="ctl"><span class="lab">Channel</span><select id="chStride" class="ch"></select></label>
+    </div>
+    <figure class="fig">
+      <div id="pStride" class="plot"></div>
+    </figure>
+    <div class="tablewrap"><table id="tStride"></table></div>
+  </section>
+
+  <section id="sensors">
+    <h2>Sternum and breasts</h2>
+    <div class="sub">
+      <label class="ctl"><span class="lab">Channel</span><select id="chSx"><option value="0">ax</option><option value="1">ay</option><option value="2" selected>az</option></select></label>
+      <span class="ctl"><span class="lab">View</span>
+        <span class="seg" id="sxView">
+          <button type="button" data-v="loop" aria-pressed="true">11 s loop</button>
+          <button type="button" data-v="stride" aria-pressed="false">Stride</button>
+        </span></span>
+      <span class="ctl"><span class="lab">Show</span>
+        <span class="seg" id="sxMode">
+          <button type="button" data-v="abs" aria-pressed="true">Each sensor</button>
+          <button type="button" data-v="rel" aria-pressed="false">Relative to sternum</button>
+        </span></span>
+      <label class="ctl"><input type="checkbox" id="sxLoops"> every loop</label>
+      <label class="ctl"><input type="checkbox" id="sxBand" checked> &plusmn; 1 SD</label>
+      <label class="ctl"><input type="checkbox" id="sxMean" checked> mean</label>
+    </div>
+    <h3 class="row" id="hSxBra">With bra</h3>
+    <figure class="fig"><div id="pSxBra" class="plot"></div></figure>
+    <h3 class="row" id="hSxNo">Without bra</h3>
+    <figure class="fig"><div id="pSxNo" class="plot"></div></figure>
+  </section>
+</div>
+
+<script>
+(function(){
+const D = window.DATA;
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+function dec(s, scale){
+  const b = atob(s), n = b.length >> 1, out = new Float32Array(n);
+  for (let i = 0; i < n; i++){ let v = b.charCodeAt(2*i) | (b.charCodeAt(2*i+1) << 8); if (v > 32767) v -= 65536; out[i] = v / scale; }
+  return out;
+}
+const nL = D.loopRun.length;
+const cond = D.loopRun.map(r => D.runCond[r-1]);
+const label = l => D.runs[D.loopRun[l]-1] + ' loop ' + D.loopIdx[l];
+const ref = D.motor.ref.map(s => dec(s, D.motor.scale));
+const act = D.motor.act.map(L => L.map(s => dec(s, D.motor.scale)));
+const imu = D.imu.loops.map(L => L.map((s,k) => dec(s, D.imu.scale[k])));
+const strd = D.stride.data.map(L => L.map((s,k) => dec(s, D.imu.scale[k])));
+const tM = Float32Array.from(ref[0], (_,i) => i / D.motor.fs);
+const tI = Float32Array.from(imu[0][0], (_,i) => i / D.imu.fs);
+const tS = Float32Array.from(strd[0][0], (_,i) => i / D.stride.fs);
+const CH = ['ax','ay','az','ωx','ωy','ωz'];
+const CHNAME = ['acceleration x','acceleration y','acceleration z','rate x','rate y','rate z'];
+const unit = c => c < 3 ? 'g' : 'deg/s'; // acceleration is gravity-free, in g
+
+const st = {cond:'all', loops:true, band:true, hl:-1, mmode:'angle', motor:0, ch:2, steps:false};
+const hl = document.getElementById('hl');
+for (let l = 0; l < nL; l++){ const o = document.createElement('option'); o.value = l; o.textContent = label(l); hl.appendChild(o); }
+const chSel = [...document.querySelectorAll('select.ch')];
+for (const s of chSel){ CH.forEach((c, i) => { const o = document.createElement('option'); o.value = i; o.textContent = c + '  (' + CHNAME[i] + ')'; s.appendChild(o); }); s.value = st.ch; }
+
+function sel(){ const out = []; for (let l = 0; l < nL; l++) if (st.cond === 'all' || cond[l] === st.cond) out.push(l); return out; }
+function stats(arrs){
+  const n = arrs.length, L = arrs[0].length, m = new Float32Array(L), s = new Float32Array(L);
+  for (const a of arrs) for (let i = 0; i < L; i++) m[i] += a[i];
+  for (let i = 0; i < L; i++) m[i] /= n;
+  if (n > 1){ for (const a of arrs) for (let i = 0; i < L; i++){ const d = a[i] - m[i]; s[i] += d*d; } for (let i = 0; i < L; i++) s[i] = Math.sqrt(s[i] / (n-1)); }
+  return [m, s];
+}
+const rms = a => { let s = 0; for (const v of a) s += v*v; return Math.sqrt(s / a.length); };
+function joined(t, arrs){
+  const L = t.length, x = new Float32Array(arrs.length*(L+1)), y = new Float32Array(arrs.length*(L+1));
+  arrs.forEach((a, j) => { const o = j*(L+1); x.set(t, o); y.set(a, o); x[o+L] = NaN; y[o+L] = NaN; });
+  return [x, y];
+}
+
+// one plot: every item overlaid (coloured by condition), mean +- 1 SD, optional reference and highlight
+function draw(div, o){
+  const traces = [], C = {bra: css('--bra'), nobra: css('--nobra')}, all = o.items.map(o.series);
+  if (st.loops) for (const c of ['bra','nobra']){
+    const grp = o.items.filter(j => o.condOf(j) === c).map(o.series);
+    if (!grp.length) continue;
+    const [x, y] = joined(o.t, grp);
+    traces.push({type:'scattergl', mode:'lines', x, y, line:{color:C[c], width:1}, opacity:o.opacity,
+      name:(c === 'bra' ? 'bra' : 'no bra'), hoverinfo:'skip'});
+  }
+  if (st.band && all.length){
+    const [m, s] = stats(all);
+    traces.push({type:'scatter', mode:'lines', x:o.t, y:m.map((v,i) => v + s[i]), line:{width:0}, hoverinfo:'skip', showlegend:false});
+    traces.push({type:'scatter', mode:'lines', x:o.t, y:m.map((v,i) => v - s[i]), line:{width:0}, fill:'tonexty', fillcolor:css('--fg-3') + '55', name:'± 1 SD', hoverinfo:'skip'});
+    traces.push({type:'scatter', mode:'lines', x:o.t, y:m, line:{color:css('--mean'), width:1.6}, name:'mean', hovertemplate:'%{y:.2f}<extra>mean</extra>'});
+  }
+  if (o.ref) traces.push({type:'scatter', mode:'lines', x:o.t, y:o.ref, line:{color:css('--ref'), width:1.4, dash:'dash'}, name:'reference', hovertemplate:'%{y:.2f}<extra>reference</extra>'});
+  if (o.hl != null) traces.push({type:'scatter', mode:'lines', x:o.t, y:o.series(o.hl), line:{color:css('--fg'), width:2.2}, name:label(o.hl)});
+  const rule = css('--rule');
+  Plotly.react(div, traces, {
+    margin:{l:60, r:14, t:30, b:46}, paper_bgcolor:'rgba(0,0,0,0)', plot_bgcolor:'rgba(0,0,0,0)',
+    font:{family:css('--body'), size:12, color:css('--fg-2')}, legend:{orientation:'h', x:0, y:1.09, font:{size:11}}, hovermode:'closest',
+    xaxis:{title:{text:o.xlab, standoff:6}, gridcolor:rule, zerolinecolor:rule, linecolor:rule},
+    yaxis:{title:{text:o.ylab, standoff:4}, gridcolor:rule, zerolinecolor:rule, linecolor:rule},
+    shapes:o.shapes || [], annotations:o.annotations || []
+  }, {responsive:true, displaylogo:false, modeBarButtonsToRemove:['lasso2d','select2d']});
+}
+
+function drawMotor(){
+  const ids = sel(), k = st.motor, mean = stats(ids.map(l => act[l][k]))[0];
+  const series = st.mmode === 'angle' ? l => act[l][k]
+    : st.mmode === 'err' ? l => act[l][k].map((v,i) => v - ref[k][i])
+    : l => act[l][k].map((v,i) => v - mean[i]);
+  draw('pMotor', {t:tM, items:ids, condOf:l => cond[l], series, opacity:.35, ref: st.mmode === 'angle' ? ref[k] : null,
+    hl: ids.includes(st.hl) ? st.hl : null, ylab:'motor ' + (k+1) + ' (deg)', xlab:'time in loop (s)'});
+}
+
+function stepShapes(){
+  if (!st.steps) return [];
+  const sh = [], s = D.steps;
+  for (let i = 0; i < s.t.length; i++){
+    const t1 = i + 1 < s.t.length ? s.t[i+1] : D.loopT;
+    sh.push({type:'rect', xref:'x', yref:'paper', x0:s.t[i], x1:t1, y0:0, y1:1, line:{width:0}, layer:'below', fillcolor: s.side[i] ? css('--left') : css('--right')});
+    sh.push({type:'line', xref:'x', yref:'paper', x0:s.peak[i], x1:s.peak[i], y0:0, y1:1, line:{width:1, dash:'dot', color:css('--fg-3')}});
+  }
+  return sh;
+}
+function drawImu(){
+  const ids = sel(), c = st.ch;
+  draw('pImu', {t:tI, items:ids, condOf:l => cond[l], series:l => imu[l][c], opacity:.35,
+    hl: ids.includes(st.hl) ? st.hl : null, ylab:CH[c] + ' (' + unit(c) + ')', xlab:'time in loop (s)', shapes:stepShapes()});
+  const sd = rms(stats(ids.map(l => imu[l][c]))[1]);
+  document.getElementById('capImu').innerHTML = `<b>${CH[c]}, ${ids.length} loops.</b> Average loop-to-loop SD <span class="num">${sd.toFixed(c < 3 ? 3 : 1)}</span> ${unit(c)}.`
+    + (st.steps ? ' Blue band: right step, orange band: left step, dotted line: peak vertical load.' : '');
+}
+
+function drawStride(){
+  const ids = sel(), c = st.ch, mk = D.stride.marks, keep = [];
+  D.stride.loop.forEach((l, j) => { if (ids.includes(l-1)) keep.push(j); });
+  draw('pStride', {t:tS, items:keep, condOf:j => cond[D.stride.loop[j]-1], series:j => strd[j][c], opacity:.18, word:'strides',
+    ylab:CH[c] + ' (' + unit(c) + ')', xlab:'time from right contact (s)',
+    shapes:[{type:'rect', xref:'x', yref:'paper', x0:mk[0], x1:mk[2], y0:0, y1:1, line:{width:0}, layer:'below', fillcolor:css('--right')},
+            {type:'rect', xref:'x', yref:'paper', x0:mk[2], x1:mk[4], y0:0, y1:1, line:{width:0}, layer:'below', fillcolor:css('--left')}],
+    annotations:[{text:'right step', xref:'x', yref:'paper', x:mk[2]/2, y:1, yanchor:'bottom', showarrow:false, font:{size:11, color:css('--bra')}},
+                 {text:'left step', xref:'x', yref:'paper', x:(mk[2] + mk[4])/2, y:1, yanchor:'bottom', showarrow:false, font:{size:11, color:css('--nobra')}}]});
+  strideTable(keep);
+}
+
+function strideTable(keep){
+  const mk = D.stride.marks, fs = D.stride.fs;
+  const reg = [[0, Math.round(mk[2]*fs)], [Math.round(mk[2]*fs), tS.length]];
+  const ms = a => { const n = a.length, m = a.reduce((s,v) => s+v, 0)/n; const s = n > 1 ? Math.sqrt(a.reduce((q,v) => q + (v-m)*(v-m), 0)/(n-1)) : 0; return [m, s]; };
+  const f = ([m, s], d) => `${m.toFixed(d)} &plusmn; ${s.toFixed(d)}`;
+  let h = '<thead><tr><th class="l">channel</th><th class="l">unit</th><th>right step mean</th><th>right peak</th><th>right min</th><th>left step mean</th><th>left peak</th><th>left min</th></tr></thead><tbody>';
+  for (const c of [2]){ // az only
+    const d = 3, cells = [];
+    for (const [a, b] of reg){
+      const mean = [], pk = [], mn = [];
+      for (const j of keep){ const seg = strd[j][c].subarray(a, b); let s = 0, hi = -Infinity, lo = Infinity; for (const v of seg){ s += v; if (v > hi) hi = v; if (v < lo) lo = v; } mean.push(s/seg.length); pk.push(hi); mn.push(lo); }
+      cells.push(f(ms(mean), d), f(ms(pk), d), f(ms(mn), d));
+    }
+    h += `<tr><td>${CH[c]}</td><td class="l">${unit(c)}</td>${cells.map(x => `<td class="num">${x}</td>`).join('')}</tr>`;
+  }
+  document.getElementById('tStride').innerHTML = h + '</tbody>';
+}
+
+// breast imus: own sensor axes, no right-breast sensor in the no-bra runs
+const brDec = a => a.map(L => Array.isArray(L) && L.length ? L.map(s => dec(s, D.breast.scale)) : null);
+const lb = brDec(D.breast.left), rb = brDec(D.breast.right);
+function drawBreast(div, arr, c){
+  const ids = sel().filter(l => arr[l]);
+  if (!ids.length){
+    Plotly.react(div, [], {paper_bgcolor:'rgba(0,0,0,0)', plot_bgcolor:'rgba(0,0,0,0)', xaxis:{visible:false}, yaxis:{visible:false},
+      annotations:[{text:'No sensor in the selected runs', xref:'paper', yref:'paper', x:.5, y:.5, showarrow:false, font:{size:13, color:css('--fg-3')}}]}, {displaylogo:false});
+    return;
+  }
+  draw(div, {t:tI, items:ids, condOf:l => cond[l], series:l => arr[l][c], opacity:.35, hl: ids.includes(st.hl) ? st.hl : null,
+    ylab:['ax','ay','az'][c] + ' (g)', xlab:'time in loop (s)'});
+}
+const drawLb = () => drawBreast('pLb', lb, +document.getElementById('chLb').value);
+const drawRb = () => drawBreast('pRb', rb, +document.getElementById('chRb').value);
+document.getElementById('chLb').addEventListener('change', drawLb);
+document.getElementById('chRb').addEventListener('change', drawRb);
+
+// sternum (torso imu) and both breasts, one row per condition. Breast data is breast - sternum with both
+// in the same levelled axes (rest-gravity tilt taken out); "each sensor" adds the sternum back
+const rL = brDec(D.rel.left), rR = brDec(D.rel.right), rLs = brDec(D.rel.strideLeft), rRs = brDec(D.rel.strideRight);
+const sx = {view:'loop', mode:'abs', loops:false, band:true, mean:true};
+function drawSensorRow(div, head, cname, title){
+  const c = +document.getElementById('chSx').value, loop = sx.view === 'loop';
+  const items = loop ? [...Array(nL).keys()].filter(l => cond[l] === cname)
+                     : D.stride.loop.map((l, j) => j).filter(j => cond[D.stride.loop[j]-1] === cname);
+  const t = loop ? tI : tS, ster = loop ? i => imu[i][c] : j => strd[j][c], RL = loop ? rL : rLs, RR = loop ? rR : rRs;
+  const plus = (R, i) => { const s = ster(i); return R[i][c].map((v, k) => v + s[k]); };
+  const series = sx.mode === 'rel'
+    ? [['left breast − sternum', '--lbc', i => RL[i] && RL[i][c]], ['right breast − sternum', '--rbc', i => RR[i] && RR[i][c]]]
+    : [['sternum', '--stern', i => ster(i)], ['left breast', '--lbc', i => RL[i] && plus(RL, i)], ['right breast', '--rbc', i => RR[i] && plus(RR, i)]];
+  const traces = [];
+  for (const [name, tok, fn] of series){
+    const arr = items.map(fn).filter(Boolean);
+    if (!arr.length) continue;
+    const col = css(tok);
+    if (sx.loops){
+      const [x, y] = joined(t, arr);
+      traces.push({type:'scattergl', mode:'lines', x, y, line:{color:col, width:1}, opacity: loop ? .3 : .12, name:name + ', each', hoverinfo:'skip'});
+    }
+    if (sx.band || sx.mean){
+      const [m, s] = stats(arr);
+      if (sx.band){
+        traces.push({type:'scatter', mode:'lines', x:t, y:m.map((v,i) => v + s[i]), line:{width:0}, hoverinfo:'skip', showlegend:false});
+        traces.push({type:'scatter', mode:'lines', x:t, y:m.map((v,i) => v - s[i]), line:{width:0}, fill:'tonexty', fillcolor:col + '33', name:name + ' ± 1 SD', hoverinfo:'skip'});
+      }
+      if (sx.mean) traces.push({type:'scatter', mode:'lines', x:t, y:m, line:{color:col, width:1.8}, name:name + ' mean', hovertemplate:'%{y:.3f} g<extra>' + name + '</extra>'});
+    }
+  }
+  document.getElementById(head).textContent = title + ' · ' + items.length + (loop ? ' loops' : ' strides');
+  const mk = D.stride.marks, rule = css('--rule');
+  Plotly.react(div, traces, {
+    margin:{l:60, r:14, t:30, b:46}, paper_bgcolor:'rgba(0,0,0,0)', plot_bgcolor:'rgba(0,0,0,0)',
+    font:{family:css('--body'), size:12, color:css('--fg-2')}, legend:{orientation:'h', x:0, y:1.09, font:{size:11}}, hovermode:'closest',
+    xaxis:{title:{text: loop ? 'time in loop (s)' : 'time from right contact (s)', standoff:6}, gridcolor:rule, zerolinecolor:rule, linecolor:rule},
+    yaxis:{title:{text:['ax','ay','az'][c] + (sx.mode === 'rel' ? ' relative to sternum (g)' : ' (g)'), standoff:4}, gridcolor:rule, zerolinecolor:rule, linecolor:rule},
+    shapes: loop ? [] : [{type:'rect', xref:'x', yref:'paper', x0:mk[0], x1:mk[2], y0:0, y1:1, line:{width:0}, layer:'below', fillcolor:css('--right')},
+                         {type:'rect', xref:'x', yref:'paper', x0:mk[2], x1:mk[4], y0:0, y1:1, line:{width:0}, layer:'below', fillcolor:css('--left')}]
+  }, {responsive:true, displaylogo:false, modeBarButtonsToRemove:['lasso2d','select2d']});
+}
+function drawSensors(){ drawSensorRow('pSxBra', 'hSxBra', 'bra', 'With bra'); drawSensorRow('pSxNo', 'hSxNo', 'nobra', 'Without bra'); }
+document.getElementById('chSx').addEventListener('change', drawSensors);
+for (const [id, key] of [['sxView', 'view'], ['sxMode', 'mode']]) document.getElementById(id).addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  sx[key] = b.dataset.v;
+  for (const x of e.currentTarget.querySelectorAll('button')) x.setAttribute('aria-pressed', x === b ? 'true' : 'false');
+  drawSensors();
+});
+for (const [id, key] of [['sxLoops', 'loops'], ['sxBand', 'band'], ['sxMean', 'mean']])
+  document.getElementById(id).addEventListener('change', e => { sx[key] = e.target.checked; drawSensors(); });
+
+function drawAll(){ drawMotor(); drawImu(); drawLb(); drawRb(); drawSensors(); drawStride(); }
+
+function seg(id, key, redraw){
+  document.getElementById(id).addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    st[key] = b.dataset.v;
+    for (const x of e.currentTarget.querySelectorAll('button')) x.setAttribute('aria-pressed', x === b ? 'true' : 'false');
+    redraw();
+  });
+}
+seg('cond', 'cond', drawAll);
+seg('mmode', 'mmode', drawMotor);
+document.getElementById('motor').addEventListener('change', e => { st.motor = +e.target.value; drawMotor(); });
+for (const s of chSel) s.addEventListener('change', e => { st.ch = +e.target.value; for (const o of chSel) o.value = st.ch; drawImu(); drawStride(); });
+document.getElementById('showLoops').addEventListener('change', e => { st.loops = e.target.checked; drawAll(); });
+document.getElementById('showBand').addEventListener('change', e => { st.band = e.target.checked; drawAll(); });
+document.getElementById('showSteps').addEventListener('change', e => { st.steps = e.target.checked; drawImu(); });
+hl.addEventListener('change', e => { st.hl = +e.target.value; drawMotor(); drawImu(); drawLb(); drawRb(); });
+try { matchMedia('(prefers-color-scheme: dark)').addEventListener('change', drawAll); } catch (e) {}
+new MutationObserver(drawAll).observe(document.documentElement, {attributes:true, attributeFilter:['data-theme']});
+drawAll();
+})();
+</script>

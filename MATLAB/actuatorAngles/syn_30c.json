@@ -1,0 +1,17 @@
+{
+  "file": "syn_30c.csv",
+  "created": "2026-10-07T22:29:45",
+  "mode": "syn",
+  "cycles": 30,
+  "rows": 11001,
+  "rateHz": 1000,
+  "durationS": 11,
+  "columns": "q1..q6 crank angles (rad), inverseKinematics order",
+  "rampTimeS": 1,
+  "torsoOffsetM": [
+    0,
+    0,
+    0.1
+  ],
+  "sha256": "fc5809cbcd6f3ed6f8e68e3bc574774c3698bd1c552212def3749493d99d5141"
+}
